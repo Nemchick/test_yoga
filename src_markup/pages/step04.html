@@ -1,0 +1,70 @@
+{% extends "master/questionnaire.html" %} {% block content %}
+
+<div class="questionnaire questionnaire--step04">
+  <div class="questionnaire__header">
+    <div class="questionnaire__header--left">
+      <a href="../pages/step03.html" class="back-link">
+        <i class="icon-back"></i>
+      </a>
+    </div>
+    <div class="questionnaire__header--center">
+      <div class="questionnaire-progress__wrapper">
+        <div class="questionnaire-progress">
+          <div
+            class="questionnaire-progress__section"
+            style="background-size: 63%"
+          ></div>
+          <div class="questionnaire-progress__section"></div>
+          <div class="questionnaire-progress__section"></div>
+        </div>
+      </div>
+    </div>
+    <div class="questionnaire__header--right">
+      <button class="button--close"><i class="icon-close"></i></button>
+    </div>
+  </div>
+  <div class="questionnaire__content">
+    <div class="questionnaire__title">
+      <img src="../img/icons/emotional.svg" alt="" />
+      <h1>Эмоциональное здоровье</h1>
+    </div>
+    <div class="questionnaire__description">
+      <p>
+        Мы постоянно испытываем весь спектр эмоций. Эмоциональное здоровье
+        предполагает, что приятные и нейтральные эмоции являются вашим привычным
+        фоном жизни, а если происходят какие-то неприятные события, то вы умеете
+        быстро выводить себя из негативных эмоций, не застревая в них надолго.
+        Подумайте, насколько вы довольны своим эмоциональным фоном в целом?
+      </p>
+    </div>
+    <form method="post" action="#" class="form form--level">
+      <fieldset class="form__section">
+        <div class="label-range">
+          <span>ужасно</span><span>хорошо</span><span>отлично</span>
+        </div>
+
+        <div
+          class="range-slider"
+          style="--min: 0; --max: 10; --step: 1; --value: 5; --text-value: '5'"
+        >
+          <input
+            type="range"
+            min="0"
+            max="10"
+            step="1"
+            value="5"
+            oninput="this.parentNode.style.setProperty('--value',this.value); this.parentNode.style.setProperty('--text-value', JSON.stringify(this.value))"
+          />
+          <output></output>
+          <div class="range-slider__progress"></div>
+        </div>
+      </fieldset>
+      <fieldset class="form__section form__section--submit">
+        {{ fieldButton({ tag: 'a', href: '../pages/step05.html', typeClass: '5',
+        content: 'Продолжить' }) }}
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

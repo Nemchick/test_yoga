@@ -1,0 +1,75 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@gtm-support/vue2-gtm": "^2.0.0",
+    "chart.js": "^4.2.1",
+    "chartjs-plugin-datalabels": "^2.2.0",
+    "chartjs-plugin-zoom": "^2.0.1",
+    "core-js": "^3.8.3",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "node-polyfill-webpack-plugin": "^2.0.1",
+    "node-sass": "^8.0.0",
+    "sass-loader": "^13.2.0",
+    "swiper": "^9.1.0",
+    "v-click-outside": "^3.2.0",
+    "v-mask": "^2.3.0",
+    "video.js": "^8.18.1",
+    "vidstack": "^1.12.11",
+    "vue": "^2.6.14",
+    "vue-awesome-notifications": "^3.1.1",
+    "vue-chartjs": "^5.2.0",
+    "vue-date-fns": "^2.0.2",
+    "vue-infinite-loading": "^2.4.5",
+    "vue-lazyload": "^1.3.5",
+    "vue-meta": "^2.4.0",
+    "vue-resource": "^1.5.3",
+    "vue-router": "3.6.5",
+    "vue-youtube": "^1.4.0",
+    "vue-youtube-embed": "^2.2.2",
+    "vuelidate": "^0.7.7",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "sass": "^1.62.1",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "plugin:prettier/recommended",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

@@ -1,0 +1,66 @@
+{% set logged = "yes" %} {% extends "master/master.html" %} {% block content %}
+
+<div class="page page-library">
+  <div class="container">
+    <div class="page__header">
+      <div class="page__title">
+        <h1>Библиотека</h1>
+        <div class="library--pro">Pro</div>
+      </div>
+      <form action="#" method="GET" class="search">
+        <button type="submit" value="" class="search__button">
+          <i class="icon-search"></i>
+        </button>
+        <input
+          type="text"
+          id="search-library"
+          name="search-library"
+          value=""
+          placeholder="Поиск"
+        />
+      </form>
+    </div>
+    <div class="library__wrapper">
+      <div class="library__header">
+        <a href="#" class="button button--history button--t3"
+          ><i class="icon-refresh"></i> История просмотров</a
+        >
+      </div>
+      <ul class="library__list">
+        {% for item in range(0, 3) %}
+        <li class="library-item">
+          <div class="library-item__img">
+            <img src="../img/library/01.png" alt="" />
+          </div>
+          <div class="library-item__name">
+            <a href="pages/library-category.html" class="library-item__link"
+              >Зарядиться энергией <i class="icon-arrow-link"></i>
+            </a>
+          </div>
+        </li>
+        <li class="library-item">
+          <div class="library-item__img">
+            <img src="../img/library/02.png" alt="" />
+          </div>
+          <div class="library-item__name">
+            <a href="pages/library-category.html" class="library-item__link"
+              >Улучшить сон <i class="icon-arrow-link"></i>
+            </a>
+          </div>
+        </li>
+        <li class="library-item">
+          <div class="library-item__img">
+            <img src="../img/library/03.png" alt="" />
+          </div>
+          <div class="library-item__name">
+            <a href="pages/library-category.html" class="library-item__link"
+              >Сосредоточиться <i class="icon-arrow-link"></i>
+            </a>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{{ block("components/audio-player") }} {% endblock %}

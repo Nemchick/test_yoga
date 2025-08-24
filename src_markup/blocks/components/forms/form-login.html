@@ -1,0 +1,29 @@
+<div class="form-wrapper">
+  <form method="post" action="#" class="form form--login">
+    <div class="form__heading">
+      <h2 class="form__title">Авторизация</h2>
+    </div>
+    <fieldset class="form__section">
+      {{ fieldInput({ type: 'text', id: 'login', label: 'E-mail', placeholder:
+      'Введите e-mail', status: '', notification: '' }) }} {{ fieldInput({ type:
+      'password', id: 'pass', label: 'Пароль', placeholder: 'Введите пароль',
+      status: 'error', notification: 'Неверный пароль' }) }}
+      <a href="pages/restore_request.html" class="forgot-link"
+        >Забыли пароль?</a
+      >
+    </fieldset>
+    <fieldset class="form__section form__section--submit">
+      {{ fieldInput({ type: 'checkbox', id: 'agree2', label: 'Оставаться в
+      системе', status: '', notification: '' }) }} {{ fieldButton({ tag:
+      'button', type: 'submit', typeClass: '1', sizeClass: '1', disabled:
+      'disabled', content: 'Войти' }) }}
+    </fieldset>
+  </form>
+  <div class="socials__description">
+    <p>или авторизуйтесь через соцсеть</p>
+  </div>
+  {{ block("components/socials") }}
+  <div class="form__addition">
+    Нет аккаунта? <a href="pages/registration.html">Зарегистрируйтесь</a>
+  </div>
+</div>

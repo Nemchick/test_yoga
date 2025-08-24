@@ -1,0 +1,208 @@
+.subscribes {
+  &__wrapper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 642px;
+    padding: 64px 80px;
+    border-radius: 20px;
+    background: #ffffff;
+  }
+  & .button--s1 {
+    margin-top: 16px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    background: #f7fafb;
+    border-radius: 16px;
+    margin-bottom: 12px;
+    min-height: 64px;
+    & .button--t2 {
+      color: #ffffff;
+      background: #009ff5;
+      &:hover {
+        background: #ffffff;
+        color: #374957;
+      }
+    }
+    &.current {
+      align-items: flex-start;
+      & .subscribes__description {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    &.yearly {
+      background: linear-gradient(71.92deg, #009ff5 0%, #59ca56 100%);
+      & .subscribes__info,
+      & .subscribes__notice {
+        color: #ffffff;
+      }
+      & .button--t2 {
+        background: #ffffff;
+        color: #374957;
+        &:hover {
+          color: #ffffff;
+          background: #009ff5;
+        }
+      }
+    }
+    & .button {
+      border-radius: 8px;
+    }
+  }
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+  &__subtitle {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 18px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #577084;
+  }
+  &__title {
+    & span {
+      background: linear-gradient(81.09deg, #009ff5 0%, #59ca56 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  }
+  &__term {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  &__price {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    margin-left: 8px;
+  }
+  &__notice {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #577084;
+  }
+  &__status {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #ffffff;
+    background: #59ca56;
+    border-radius: 6px;
+    padding: 4px 8px;
+    flex-shrink: 0;
+    & i {
+      font-size: 8px;
+      margin-right: 4px;
+    }
+  }
+  &__discount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    width: 40px;
+    height: 40px;
+    background-image: url('../img/icons/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 0 8px;
+    color: #374957;
+  }
+}
+.section--program {
+  & .subscribes__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+  }
+  & .program__description {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 40px;
+  }
+  & .subscribes__item {
+    height: 56px;
+    padding: 8px 20px;
+    &.yearly {
+      margin-bottom: 0;
+      & .subscribes__term {
+        color: #ffffff;
+      }
+    }
+    & .subscribes__term,
+    .subscribes__price {
+      font-size: 18px;
+    }
+  }
+  & .program__bg {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 0;
+  }
+}
+.page-library {
+  & .subscribes {
+    align-self: flex-start;
+    padding: 32px 24px;
+    background: linear-gradient(71.92deg, #d9f1fe 0%, #e6f7e6 100%);
+    border-radius: 20px;
+    &__title {
+      margin-bottom: 32px;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+    }
+    &__subtitle {
+      margin-top: 32px;
+      text-align: center;
+    }
+    &__item {
+      padding: 16px 20px;
+    }
+    &__term {
+      font-size: 18px;
+    }
+    &__price {
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    &__info {
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+}
+.promocode-link {
+  color: #009ff5;
+  font-weight: 500;
+  margin-top: 12px;
+  display: inline-block;
+  transition: opacity 0.4s;
+  &:hover {
+    opacity: 0.4;
+  }
+}

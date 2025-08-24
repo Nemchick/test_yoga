@@ -1,0 +1,19 @@
+<div class="form-wrapper">
+  <form method="post" action="#" class="form form--reset">
+    <div class="form__heading">
+      <h2 class="form__title">Придумайте новый пароль</h2>
+    </div>
+    <fieldset class="form__section">
+      {{ fieldInput({ type: 'password', id: 'pass', label: 'Пароль',
+      placeholder: 'Придумайте пароль', notification: '' }) }} {{ fieldInput({
+      type: 'password', id: 'pass2', label: 'Повторить пароль', placeholder:
+      'Повторите пароль', notification: '' }) }}
+    </fieldset>
+    <fieldset class="form__section form__section--submit">
+      {{ fieldInput({ type: 'checkbox', id: 'agree2', label: 'Оставаться в
+      системе', status: '', notification: '' }) }} {{ fieldButton({ tag:
+      'button', type: 'submit', typeClass: '1', sizeClass: '1', content:
+      'Сохранить пароль' }) }}
+    </fieldset>
+  </form>
+</div>

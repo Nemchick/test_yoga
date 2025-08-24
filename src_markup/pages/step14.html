@@ -1,0 +1,39 @@
+{% extends "master/questionnaire.html" %} {% block content %}
+
+<div class="questionnaire questionnaire--step14">
+  <div class="questionnaire__header">
+    <div class="questionnaire__header--left">
+      <a href="../pages/step13.html" class="back-link">
+        <i class="icon-back"></i>
+      </a>
+    </div>
+    <div class="questionnaire__header--center">
+      <div class="progress__wrapper">
+        <div class="progress__bar"></div>
+        <div class="progress__bar"></div>
+        <div class="progress__bar"></div>
+        <div class="progress__mask" style="left: 30%"></div>
+      </div>
+    </div>
+    <div class="questionnaire__header--right">
+      <button class="button--close"><i class="icon-close"></i></button>
+    </div>
+  </div>
+  <div class="questionnaire__content">
+    <div class="questionnaire__title">
+      <span>Давайте уточним</span>
+    </div>
+    <div class="questionnaire__description">
+      <h3>
+        Мы определили, что у вас апатия и нежелание что-то делать, вы чувствуете
+        что-то подобное?
+      </h3>
+    </div>
+    <div class="questionnaire__buttons">
+      <a href="pages/step15.html" class="button button--t1"><span>Да</span></a>
+      <a href="pages/step15.html" class="button button--t1"><span>Нет</span></a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

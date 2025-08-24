@@ -1,0 +1,341 @@
+<!--
+--
+-- Главная страница для не залогиненного пользователя
+--
+-->
+{% set landing = "yes" %} {% extends "master/master.html" %} {% block content %}
+
+<div class="page page-main">
+  <section class="section section--01">
+    <div class="container">
+      <div class="section__content">
+        <h1 class="section__title">Yoga Care</h1>
+        <div class="section__description">
+          Сервис поможет достичь желаемых изменений в жизни с помощью
+          индивидуальной программы занятий по Кундалини йоге, составленной для
+          вас на основании анализа ваших приоритетов и возможностей.
+        </div>
+        {{ fieldButton({ tag: 'a', href: '../pages/my-program-first.html',
+        typeClass: '1', sizeClass: '1', content: 'Подобрать программу' }) }}
+      </div>
+      <img
+        class="section__pic"
+        src="../img/section/pic01.png"
+        alt="Yoga Care"
+      />
+    </div>
+  </section>
+  <section class="section section--02">
+    <div class="slider-text">
+      <div class="swiper-container" data-slider-text>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <span>Уверенность</span>
+          </div>
+          <div class="swiper-slide">
+            <span>Уверенность</span>
+          </div>
+          <div class="swiper-slide">
+            <span>Спокойствие</span>
+          </div>
+          <div class="swiper-slide">
+            <span>Гармония</span>
+          </div>
+          <div class="swiper-slide">
+            <span>Баланс</span>
+          </div>
+          <div class="swiper-slide">
+            <span>фокус</span>
+          </div>
+          <div class="swiper-slide">
+            <span>безмятежность</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--03">
+    <div class="container">
+      <div class="section__content">
+        <h3 class="section__subtitle">
+          Кундалини йога стала одним из самых масштабных и популярных
+          направлений в йоге. Она расширяет сознание и укрепляет связь с Душой,
+          Высшим Я и Источником.
+        </h3>
+        <div class="section__description">
+          Правильно подобранные практики кундалини йоги и их регулярность
+          бережно гармонизируют нервную систему, раскрепощают телесные блоки,
+          нормализуют обмен веществ и высвобождают закрепощённую энергию.
+        </div>
+      </div>
+      <img
+        class="section__pic"
+        src="../img/section/pic02.png"
+        alt="Yoga Care"
+      />
+    </div>
+  </section>
+  <section class="section section--04">
+    <div class="container">
+      <img
+        class="section__pic"
+        src="../img/section/pic03.png"
+        alt="Yoga Care"
+      />
+      <div class="section__content">
+        <h2 class="section__title">Программа подойдет тем, кто хочет:</h2>
+        <div class="section__description">Наш подход для тех, кто хочет:</div>
+        <ul class="section__list">
+          <li>Раскрыть собственный потенциал</li>
+          <li>Улучшить самочувствие</li>
+          <li>Увеличить приток энергии</li>
+          <li>Раскрепостить телесные зажимы</li>
+          <li>Сбалансировать стрессоустойчивость</li>
+          <li>Выпустить творческую энергию</li>
+          <li>Укрепить внутреннюю опору</li>
+          <li>Пробудить мощь организма, расширив Ваши возможности</li>
+        </ul>
+        <a
+          class="button button--s1 button--t1"
+          href="pages/my-program-first.html"
+          >Подобрать программу</a
+        >
+      </div>
+    </div>
+  </section>
+  <section class="section section--05">
+    <div class="container">
+      <section class="section__wrapper">
+        <div class="section__content">
+          <h2 class="section__title">
+            <i class="icon-yoga"></i> Как изменится Ваша жизнь?
+          </h2>
+          <div class="section__description">
+            При регулярных тренировках укрепляется физическое и ментальное
+            здоровье. Повышая тем самым уровень Вашей жизненной энергии, которую
+            Вы можете направить на реализацию Ваших намерений, улучшение дохода
+            и прочие блага.
+          </div>
+        </div>
+        <img
+          class="section__pic"
+          src="../img/section/pic04.png"
+          alt="Yoga Care"
+        />
+      </section>
+    </div>
+  </section>
+  <section class="section section--06">
+    <div class="container">
+      <img
+        class="section__pic"
+        src="../img/section/pic05.png"
+        alt="Yoga Care"
+      />
+      <div class="section__content">
+        <h2 class="section__title">Вы здесь потому что?</h2>
+        <ul class="section__list">
+          <li>
+            <img src=../img/icons/bullet.svg alt="" />Важен внутренний рост и
+            прогресс в ваших занятиях
+          </li>
+          <li>
+            <img src=../img/icons/bullet.svg alt="" />Хотите иметь
+            дополнительную мотивацию
+          </li>
+          <li>
+            <img src=../img/icons/bullet.svg alt="" />Экономить свое время
+          </li>
+          <li><img src=../img/icons/bullet.svg alt="" />Нужна поддержка</li>
+          <li>
+            <img src=../img/icons/bullet.svg alt="" />Хотите грамотно
+            отстраивать упражнения
+          </li>
+          <li>
+            <img src=../img/icons/bullet.svg alt="" />Ничего не знаете про йогу
+            и медитации
+          </li>
+          <li>
+            <img src=../img/icons/bullet.svg alt="" />Систематизировать знания
+          </li>
+          <li><img src=../img/icons/bullet.svg alt="" />Сложно выбрать</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section section--07">
+    <div class="container">
+      <h2 class="section__title">Мы вам даём...</h2>
+      <ul class="features__list">
+        <li class="features__item">
+          <img class="features__img" src="../img/elements/flower.svg" alt="" />
+          <p>
+            Проверенная методика подбора практик под ваш индивидуальный запрос
+          </p>
+        </li>
+        <li class="features__item">
+          <img class="features__img" src="../img/elements/coins.svg" alt="" />
+          <p>7 дней бесплатных занятий по подобранной практике</p>
+        </li>
+        <li class="features__item">
+          <img class="features__img" src="../img/elements/video.svg" alt="" />
+          <p>Структурно-продуманные видео уроки</p>
+        </li>
+        <li class="features__item">
+          <img class="features__img" src="../img/elements/asana.svg" alt="" />
+          <p>
+            Корректные методические указания по анатомической отстройке асан
+          </p>
+        </li>
+        <li class="features__item">
+          <img class="features__img" src="../img/elements/folder.svg" alt="" />
+          <p>Библиотека асан, крий, медитаций</p>
+        </li>
+        <li class="features__item">
+          <img
+            class="features__img"
+            src="../img/elements/handshake.svg"
+            alt=""
+          />
+          <p>Сплоченная команда поддержки</p>
+        </li>
+      </ul>
+
+      <div class="program-video">
+        <div class="program-video__content">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/q2qDfF0pxFg"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="section__buttons">
+        <a
+          class="button button--s1 button--t1"
+          href="pages/my-program-first.html"
+          >Подобрать программу</a
+        >
+      </div>
+      <div class="swiper" data-slider-feedback-teacher>
+        <ul class="swiper-wrapper">
+          {% for item in range(0, 5) %}
+          <li class="swiper-slide feedback-random__wrapper">
+            <div class="feedback-random">
+              <div class="feedback-random__description">
+                <i class="icon-feedback"></i>
+                <p>
+                  Это единственный сервис, который я могу смело рекомендовать
+                  как начинающим, так и опытным мастерам кундалини. Мне нравится
+                  как сервис подбирает программу, которая подходит моему
+                  текущему состоянию. Контент действительно уникальный, в
+                  сервисе есть обширная библиотека крий и медитаций, которые вы
+                  не найдете на youtube. Пользуюсь каждый день и рекомендую
+                  своим ученикам.
+                </p>
+              </div>
+              <div class="feedback-random__author">
+                <img src="../img/elements/author.jpg" alt="" />
+                <div class="feedback-random__name">
+                  Юлия Чай, <span>учитель кундалини</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--08">
+    <div class="container">
+      <h2 class="section__title">
+        С нами занимаются уже: <span class="counter">1200 человек</span>
+      </h2>
+    </div>
+    <div class="feedback-landing__wrapper">
+      <div class="swiper" data-slider-feedback-landing>
+        <ul class="swiper-wrapper">
+          {% for item in range(0, 15) %}
+          <li class="swiper-slide feedback-slider__item">
+            <div class="feedback__rating">
+              <i class="icon-star filled"></i>
+              <i class="icon-star filled"></i>
+              <i class="icon-star filled"></i>
+              <i class="icon-star filled"></i>
+              <i class="icon-star"></i>
+            </div>
+            <div class="feedback__content">
+              Прошла программу «Глубокая релаксация» и очень довольна
+              результатом. Буду продолжать занятия.
+            </div>
+            <div class="feedback__name">Инна</div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+  <section class="section section--09">
+    <div class="container">
+      <div class="section__content">
+        <div class="subscribes__wrapper">
+          <h3 class="subscribes__title">
+            Получите полный доступ к сервису и персональной программе
+            <span>от 280 ₽ в месяц</span>
+          </h3>
+          <div class="subscribes">
+            <div class="subscribes__item">
+              <div class="subscribes__description">
+                <div class="subscribes__term">1 месяц</div>
+                <div class="subscribes__info">
+                  <div class="subscribes__price">400 ₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="subscribes__item">
+              <div class="subscribes__description">
+                <div class="subscribes__term">6 месяцев</div>
+                <div class="subscribes__info">
+                  <div class="subscribes__discount">20%</div>
+                  <div class="subscribes__notice">320 ₽/мес.</div>
+                  <div class="subscribes__price">1 920 ₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="subscribes__item yearly">
+              <div class="subscribes__description">
+                <div class="subscribes__term">12 месяцев</div>
+                <div class="subscribes__info">
+                  <div class="subscribes__discount">40%</div>
+                  <div class="subscribes__notice">280 ₽/мес.</div>
+                  <div class="subscribes__price">3 360 ₽</div>
+                </div>
+              </div>
+            </div>
+            <a class="promocode-link" href="#" target="_blank"
+              >Ввести промокод</a
+            >
+          </div>
+        </div>
+      </div>
+      <img class="section__pic" src="../img/section/pic06.png" alt="" />
+    </div>
+  </section>
+</div>
+
+{% endblock %}
+
+<!--
+--
+-- Конец главной страницы для не залогиненного пользователя
+--
+-->

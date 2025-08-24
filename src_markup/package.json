@@ -1,0 +1,54 @@
+{
+  "name": "builder",
+  "description": "Build system",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp default",
+    "build": "gulp build"
+  },
+  "author": "king-asia",
+  "dependencies": {
+    "guetzli": "^2.0.0",
+    "make": "^0.8.1"
+  },
+  "devDependencies": {
+    "browser-sync": "latest",
+    "browserslist": "4.6.2",
+    "caniuse-lite": "1.0.30000974",
+    "css-mqpacker": "latest",
+    "del": "^5.1.0",
+    "gulp": "latest",
+    "gulp-autoprefixer": "7.0.0",
+    "gulp-cache": "latest",
+    "gulp-changed": "^4.0.2",
+    "gulp-concat": "latest",
+    "gulp-copy": "latest",
+    "gulp-debug": "latest",
+    "gulp-htmlclean": "latest",
+    "gulp-iconfont": "latest",
+    "gulp-iconfont-css": "latest",
+    "gulp-image": "^5.1.0",
+    "gulp-imagemin": "latest",
+    "gulp-jsbeautifier": "^3.0.1",
+    "gulp-nunjucks-render": "latest",
+    "gulp-order": "1.1.1",
+    "gulp-plumber": "latest",
+    "gulp-postcss": "9.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-dart-sass": "1.0.2",
+    "gulp-sourcemaps": "2.6.5",
+    "gulp-stylus": "2.7.0",
+    "gulp-uglify-es": "^1.0.4",
+    "pngquant": "^3.0.0",
+    "postcss-preset-env": "6.7.0",
+    "sass": "^1.53.0",
+    "sort-css-media-queries": "^1.5.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "resolutions": {
+    "browserslist": "4.6.2",
+    "caniuse-lite": "1.0.30000974"
+  }
+}

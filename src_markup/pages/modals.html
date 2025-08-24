@@ -1,0 +1,56 @@
+{% set logged = "yes" %} {% extends "master/master.html" %} {% block content %}
+
+<div class="page">
+  <div class="container">
+    <div class="page__header">
+      <h2 class="page-modal__title">Modals</h2>
+    </div>
+
+    <div class="modal__layout">
+      <ul class="modal__list">
+        <li>
+          <ul>
+            <li>
+              <h3>Details</h3>
+            </li>
+            <li>
+              {{ fieldButton({ tag: 'a', sizeClass: '1', typeClass: '1',
+              content: 'Details', href: 'modals/details.html', customData:
+              'data-modal' }) }}
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<style>
+  .page-modal__title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .modal__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .modal__list h3 {
+    font-size: 20px;
+  }
+  .modal__list > li {
+    margin: 0 30px 30px;
+  }
+  .modal__list > li > ul {
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .modal__list > li .button {
+    margin-bottom: 16px;
+    min-width: 150px;
+  }
+</style>
+
+{% endblock %}

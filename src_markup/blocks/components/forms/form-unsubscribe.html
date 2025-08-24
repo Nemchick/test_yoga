@@ -1,0 +1,22 @@
+<form method="post" action="#" class="form form--unsubscribe">
+  <div class="form__heading">
+    <h2 class="form__title">Поделитесь, почему вы хотите отменить подписку</h2>
+  </div>
+  <div class="form__description">Это поможет нам улучшить сервис.</div>
+  <fieldset class="form__section">
+    {{ fieldInput({ type: 'checkbox', id: 'variant01', label: 'Слишком высокая
+    цена подписки', customClass: 'checkbox--circle', notification: '' }) }} {{
+    fieldInput({ type: 'checkbox', id: 'variant02', label: 'Не устраивает
+    качество контента', customClass: 'checkbox--circle', notification: '' }) }}
+    {{ fieldInput({ type: 'checkbox', id: 'variant03', label: 'Нет времени на
+    занятия', customClass: 'checkbox--circle', notification: '' }) }} {{
+    fieldInput({ type: 'text', id: 'text', label: '', placeholder: 'Свой
+    вариант' }) }}
+  </fieldset>
+  <fieldset class="form__section form__section--submit">
+    {{ fieldButton({ tag: 'button', type: 'submit', typeClass: '1', sizeClass:
+    '1', disabled: '', content: 'Отменить подписку' }) }} {{ fieldButton({ tag:
+    'a', href: '../pages/my-subscribes.html', typeClass: '3', sizeClass: '1',
+    disabled: '', content: 'Я передумал(а), оставить подписку' }) }}
+  </fieldset>
+</form>

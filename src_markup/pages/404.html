@@ -1,0 +1,15 @@
+{% set logged = "yes" %} {% extends "master/master.html" %} {% block content %}
+
+<div class="page page-error">
+  <div class="container">
+    <div class="page-error__content">
+      <h2 class="page-error__title">Ошибка 404</h2>
+      <p class="page-error__description">Страница не найдена.</p>
+      <a href="/pages/index.html" class="button button--s1 button--t1"
+        >Вернуться назад</a
+      >
+    </div>
+  </div>
+</div>
+
+{% endblock %}

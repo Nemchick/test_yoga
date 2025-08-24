@@ -1,0 +1,53 @@
+<div class="player-wrapper">
+  <div class="player">
+    <audio
+      @timeupdate="onTimeUpdateListener"
+      @canplay="onCanPlay"
+      ref="audio"
+      :src="playlist[currentTrack]"
+    ></audio>
+
+    <div class="controls">
+      <div class="prev disabled" @click="prev">
+        <i class="icon-prev"></i>
+      </div>
+      <div class="play" @click="togglePlay">
+        <i class="icon-play"></i>
+      </div>
+      <div class="next" @click="next">
+        <i class="icon-next"></i>
+      </div>
+    </div>
+    <div class="record-wrapper">
+      <div class="record__img">
+        <img src="../img/library/02.png" alt="" />
+      </div>
+      <div class="record-info">
+        <div class="record-name__wrapper">
+          <span class="record-author">Weight (remix)</span>
+          <span class="record-name"
+            >YA NINA, Ashref и Cricket • Weight (remix) • 2023</span
+          >
+        </div>
+        <div class="timeline__wrapper">
+          <div class="track__time">00:00</div>
+          <div class="timeline" @click="jumpTo" ref="timeline">
+            <div style="width: 87%"></div>
+          </div>
+          <div class="track__time">00:41</div>
+        </div>
+      </div>
+    </div>
+    <div class="controls-extra">
+      <div class="repeat">
+        <i class="icon-refresh"></i>
+      </div>
+      <div class="heart">
+        <i class="icon-favorite"></i>
+      </div>
+      <div class="close">
+        <i class="icon-close"></i>
+      </div>
+    </div>
+  </div>
+</div>

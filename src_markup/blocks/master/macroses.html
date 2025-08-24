@@ -1,0 +1,146 @@
+{#
+	Элемент формы:
+		- input (text, password, email, tel, date)
+		- textarea
+		- checkbox
+		- radio
+		- select
+#}
+{%- macro fieldInput(options) -%}
+	{% set type = options.type %}
+	{% set id = options.id %}
+	{% set name = options.name %}
+	{% set label = options.label %}
+	{% set placeholder = options.placeholder %}
+	{% set value = options.value %}
+	{% set price = options.price %}
+	{% set status = options.status %}
+	{% set notification = options.notification %}
+	{% set disabled = options.disabled %}
+	{% set customClass = options.customClass %}
+	{% set customData = options.customData %}
+	{% set checked = options.checked %}
+
+	{# Добавляем класс обёртке в зависимости от типа элемента #}
+	{%- if type == 'text' or type == 'password' or type == 'email' or type == 'tel' or type == 'date' -%}
+		{% set element = 'input' %}
+		{% elif type == 'checkbox' %}
+		{% set element = 'checkbox' %}
+		{% elif type == 'radio' %}
+		{% set element = 'radio' %}
+		{%- elif type == 'textarea' -%}
+		{% set element = 'textarea' %}
+		{% elif type == 'select' %}
+		{% set element = 'select' %}
+	{%- endif -%}
+
+	<div class="form__input form__input--{{ type }} {{ element }} {{ disabled }} {{ customClass }} {{ status }}">
+		{% if label and element !== 'checkbox' and element !== 'radio' -%}
+			<label class="label-input" for="{{ id }}">{{label}}</label>
+		{% endif -%}
+
+		{%- if type == 'password' -%}
+			<span class="pass-switch icon-view" data-password-toggler></span>
+		{% endif -%}
+
+		{# Формируем основной элемент #}
+		{%- if element != 'textarea' and element != 'select' -%}
+			<input
+					type="{{ type }}"
+		{% endif -%}
+
+		{%- if element == 'textarea' -%}
+			<textarea
+		{% endif -%}
+
+		{%- if element == 'select' -%}
+		<select
+				{% endif -%}
+
+				id="{{ id }}"
+
+				{% if element !== 'checkbox' and element !== 'select' and element !== 'radio' %}
+					value="{{ value }}"
+					placeholder="{{ placeholder }}"
+				{% endif %}
+
+				{% if checked %}
+					checked
+				{% endif %}
+
+				{% if name %}
+					name="{{ name }}"
+				{% endif %}
+
+				{{ disabled }}
+				{{ customData }}
+				{{ dateData }}
+		>{#
+
+			Хак для удаления пробела внутри тега textarea
+			#}{% if element == 'textarea' %}
+				{{- value -}}
+				</textarea>
+			{%- endif -%}
+
+			{%- if element == 'select' %}
+			{%- for option in value %}
+				<option value="{{ loop.index0 }}">{{ option }} <span>{{ price }}</span></option>
+			{%- endfor %}
+		</select>
+		{% endif %}
+
+		{%- if element == 'checkbox' or element == 'radio' %}
+			<label for="{{ id }}">{{ label | safe }}</label>
+		{% endif %}
+
+		{%- if status -%}
+			<div class="form__notification form__notification--{{status}}">{{ notification }}</div>
+		{% endif -%}
+	</div>
+{%- endmacro -%}
+
+
+{#
+Кнопки
+#}
+{%- macro fieldButton(options) -%}
+	{% set tag = options.tag %}
+	{% set type = options.type %}
+	{% set sizeClass = options.sizeClass %}
+	{% set typeClass = options.typeClass %}
+	{% set content = options.content %}
+	{% set href = options.href %}
+	{% set iconClass = options.iconClass %}
+	{% set disabled = options.disabled %}
+	{% set customClass = options.customClass %}
+	{% set customData = options.customData %}
+
+	<{{ tag }}
+	{% if type and tag == 'button' %}
+		type="{{ type }}"
+		{% if disabled %}
+			{{ disabled }}
+		{% endif %}
+	{% endif %}
+
+	{% if tag == 'a' %}
+		{% if href.length == '0' or href == '#' or not href %}
+			{% set href = 'javascript:void(0)' %}
+		{% endif %}
+		href="{{ href | safe }}"
+	{% endif %}
+
+	class="button
+
+	{%- if sizeClass %} button--s{{ sizeClass }}{%- endif %}
+	{%- if typeClass %} button--t{{ typeClass }} {% endif %} {{ customClass }} {{ disabled }}"
+	{{- customData }}
+	>
+
+	<span>{{ content }}</span>
+	{%- if iconClass %}
+		<i class="{{ iconClass }}"></i>
+	{%- endif %}
+	</{{ tag }}>
+{% endmacro %}

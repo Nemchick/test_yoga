@@ -1,0 +1,125 @@
+.user {
+  &-avatar {
+    position: relative;
+    display: block;
+    height: 48px;
+    width: 48px;
+    background: #577084;
+    border-radius: 24px;
+    font-size: 28px;
+    line-height: 34px;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &__wrapper {
+      position: relative;
+    }
+    & span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    & img {
+      border-radius: 50px;
+      overflow: hidden;
+      background-color: #577084;
+      z-index: 1;
+    }
+    &.pro {
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 56px;
+        height: 56px;
+        border: 2px solid #e6434f;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+      }
+    }
+  }
+  &-menu {
+    padding-top: 28px;
+
+    &__wrapper {
+      position: absolute;
+      right: 0;
+      top: calc(100% + 12px);
+      padding: 32px;
+      width: 336px;
+      background: #ffffff;
+      box-shadow: 0 4px 40px rgba(55, 73, 87, 0.12);
+      border-radius: 28px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s;
+      & .socials__link {
+        filter: grayscale(1);
+        &:hover,
+        &.active {
+          filter: grayscale(0);
+        }
+      }
+      &.opened {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      transition: color 0.4s;
+      &:hover {
+        color: #a7bac9;
+      }
+      & i {
+        font-size: 22px;
+        margin-right: 12px;
+      }
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+  &-info {
+    padding-bottom: 20px;
+    &__name {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      &.empty {
+        & span {
+          opacity: 0.4;
+          font-size: 12px;
+        }
+      }
+      & span {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        max-width: calc(100% - 24px);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      & i {
+        color: #a7bac9;
+        margin-left: 8px;
+        cursor: pointer;
+        transition: color 0.4s;
+        &:hover {
+          color: #374957;
+        }
+      }
+    }
+    &__email {
+      color: #577084;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{% extends "master/questionnaire.html" %} {% block content %}
+
+<div class="questionnaire questionnaire--step06">
+  <div class="questionnaire__header">
+    <div class="questionnaire__header--left">
+      <a href="../pages/step05.html" class="back-link">
+        <i class="icon-back"></i>
+      </a>
+    </div>
+    <div class="questionnaire__header--center">
+      <div class="questionnaire-progress__wrapper">
+        <div class="questionnaire-progress">
+          <div
+            class="questionnaire-progress__section"
+            style="background-size: 63%"
+          ></div>
+          <div class="questionnaire-progress__section"></div>
+          <div class="questionnaire-progress__section"></div>
+        </div>
+      </div>
+    </div>
+    <div class="questionnaire__header--right">
+      <button class="button--close"><i class="icon-close"></i></button>
+    </div>
+  </div>
+  <div class="questionnaire__content">
+    <div class="questionnaire__title">
+      <img src="../img/icons/finance.svg" alt="" />
+      <h1>Финансы</h1>
+    </div>
+    <div class="questionnaire__description">
+      <p>
+        Насколько Вы удовлетворены Вашим доходом в последнее время? ощущаете ли
+        вы достаток? Можете ли Вы получить или реализовать то, чего хочется в
+        жизни, с нынешним уровнем дохода?
+      </p>
+    </div>
+    <form method="post" action="#" class="form form--level">
+      <fieldset class="form__section">
+        <div class="label-range">
+          <span>ужасно</span><span>хорошо</span><span>отлично</span>
+        </div>
+        <div class="range__wrapper">
+          <input
+            type="range"
+            name="level"
+            value="0"
+            min="0"
+            max="9"
+            list="level"
+          />
+          <datalist id="level">
+            <option value="0"></option>
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5"></option>
+            <option value="6"></option>
+            <option value="7"></option>
+            <option value="8"></option>
+            <option value="9"></option>
+          </datalist>
+        </div>
+      </fieldset>
+      <fieldset class="form__section form__section--submit">
+        {{ fieldButton({ tag: 'a', href: '../pages/step07.html', typeClass: '5',
+        content: 'Продолжить' }) }}
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends "master/questionnaire.html" %} {% block content %}
+
+<div class="questionnaire questionnaire--step12">
+  <div class="questionnaire__header">
+    <div class="questionnaire__header--left">
+      <a href="../pages/step11.html" class="back-link">
+        <i class="icon-back"></i>
+      </a>
+    </div>
+    <div class="questionnaire__header--center">
+      <div class="progress__wrapper">
+        <div class="progress__bar"></div>
+        <div class="progress__bar"></div>
+        <div class="progress__bar"></div>
+        <div class="progress__mask" style="left: 30%"></div>
+      </div>
+    </div>
+    <div class="questionnaire__header--right">
+      <button class="button--close"><i class="icon-close"></i></button>
+    </div>
+  </div>
+  <div class="questionnaire__content">
+    <div class="questionnaire__title">
+      <img src="../img/icons/spirital.svg" alt="" />
+      <h1>Духовный рост</h1>
+    </div>
+    <div class="questionnaire__description">
+      <p>
+        Кто я? Откуда я? Куда я иду? В последнее время Вы ищете ответы на эти
+        вопросы? Есть ощущение, что чего-то недостает в Вашей жизни? Как бы вы
+        оценили свой нынешний уровень духовности? Прислушайтесь к своему
+        внутреннему чувству и оцените эту сферу.
+      </p>
+    </div>
+    <form method="post" action="#" class="form form--level">
+      <fieldset class="form__section">
+        <div class="label-range">
+          <span>ужасно</span><span>хорошо</span><span>отлично</span>
+        </div>
+        <div class="range__wrapper">
+          <input
+            type="range"
+            name="level"
+            value="0"
+            min="0"
+            max="9"
+            list="level"
+          />
+          <datalist id="level">
+            <option value="0"></option>
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5"></option>
+            <option value="6"></option>
+            <option value="7"></option>
+            <option value="8"></option>
+            <option value="9"></option>
+          </datalist>
+        </div>
+      </fieldset>
+      <fieldset class="form__section form__section--submit">
+        {{ fieldButton({ tag: 'a', href: '../pages/step13.html', typeClass: '5',
+        content: 'Продолжить' }) }}
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

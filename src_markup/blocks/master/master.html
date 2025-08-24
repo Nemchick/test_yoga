@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	{% block head %}
+	{% include "fragments/head.html" %}
+	{% endblock %}
+</head>
+
+<body>
+
+	{% macro addStatus(class) %}{% if class == "error" %}{% set addClass = "error" %}{{ addClass }}{% elif class == "success" %}{% set addClass = "success" %}{{ addClass }}{% elif class == "warning" %}{% set addClass = "warning" %}{{ addClass }}{% endif %}{% endmacro %}
+
+	{% from "master/macroses.html" import fieldInput, fieldButton %}
+
+	{% macro block(name) %}
+	{% include name + ".html" %}
+	{% endmacro %}
+
+	{% if logged %}
+	<div class="helper logged">
+	{% else %}
+	<div class="helper landing">
+	{% endif %}
+		{% if logged %}
+		{% block header_logged %}
+		{% include "modules/header_logged.html" %}
+		{% endblock %}
+		{% else %}
+		{% block header %}
+		{% include "modules/header.html" %}
+		{% endblock %}
+		{% endif %}
+
+		<main class="main">
+			{% block content %}
+			{% endblock %}
+		</main>
+
+		{% block footer %}
+		{% include "modules/footer.html" %}
+		{% endblock %}
+	</div>
+	<script src="../js/bundle.js"></script>
+
+</body>
+
+</html>

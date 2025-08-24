@@ -1,0 +1,63 @@
+<!--
+
+Компонент.
+User info header
+
+-->
+
+<div class="user-avatar__wrapper">
+  <div class="user-avatar pro" data-user-menu>
+    <span>A</span>
+    <!--        <img src="../img/elements/user.png" alt="">-->
+  </div>
+  <div class="user-menu__wrapper" data-user-menu-wrapper>
+    <div class="user-info">
+      <div class="user-info__name empty">
+        <span>Имя не заполнено</span><i class="icon-edit"></i>
+      </div>
+      <div class="user-info__name">
+        <span>Елена</span><i class="icon-edit"></i>
+      </div>
+      <div class="user-info__email">elena88@gmail.com</div>
+    </div>
+
+    <div class="socials__wrapper">
+      <div class="socials__title">Подключить соцсети</div>
+      {{ block("components/socials") }}
+    </div>
+    {{ block("components/quote") }}
+    <div class="socials__wrapper">
+      <div class="socials__title">Служба поддержки</div>
+      <ul class="support">
+        <li class="support__item">
+          <a class="support__link" href="#"
+            ><img src="/img/icons/whatsapp.svg" alt=""
+          /></a>
+        </li>
+        <li class="support__item">
+          <a class="support__link" href="#"
+            ><img src="/img/icons/telegram.svg" alt=""
+          /></a>
+        </li>
+      </ul>
+    </div>
+    <ul class="user-menu">
+      <li class="user-menu__item">
+        <i class="icon-subscribes"></i>
+        <a href="pages/my-subscribes.html">Моя подписка</a>
+      </li>
+      <li class="user-menu__item">
+        <i class="icon-support"></i>
+        <a href="pages/my-subscribes.html">Служба поддержки</a>
+      </li>
+      <li class="user-menu__item">
+        <i class="icon-password"></i>
+        <a href="pages/change-password.html">Сменить пароль</a>
+      </li>
+      <li class="user-menu__item">
+        <i class="icon-logout"></i>
+        <a href="pages/index.html">Выйти из аккаунта</a>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<h2 class="section__title mobile"><span>FAQ</span>Need help?</h2>
+<div class="faq">
+  <h2 class="section__title"><span>FAQ</span>Need help?</h2>
+  {% set faq = { 'At which airports does Kalimera Meet & Greet provide Fast
+  Track services?': 'We provide this service worldwide. The company has its
+  staff and own apron transport at Larnaca Airport (Cyprus) and service
+  agreements with reliable partners at other airports.', 'When can I book Meet &
+  Greet Services?': 'You can always book the services in advance. Reservations
+  made less than 24 hours prior to your flight are subject of additional
+  confirmation by us. The latest possible reservation time is 6 hours prior to
+  the flight.', 'Do you accept cash payment / bank transfer / cryptocurrency?':
+  'Yes, we do. More details on Payment methods', 'How to cancel an order?':
+  'Please request cancellation by email vip@kalimera.vip' } %}
+  <ul class="faq__list">
+    {% for question, answer in faq %}
+    <li class="faq__item">
+      <div class="faq__question" data-faq-question>
+        <i class="icon-arrow"></i>{{ question }}
+      </div>
+      <div class="faq__answer">{{ answer }}</div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

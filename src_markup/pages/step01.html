@@ -1,0 +1,62 @@
+{% extends "master/questionnaire.html" %} {% block content %}
+
+<div class="questionnaire questionnaire--step01">
+  <div class="questionnaire__header">
+    <div class="questionnaire__header--left">
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../img/logos/logo-white.svg" alt="" />
+        </a>
+      </div>
+    </div>
+    <div class="questionnaire__header--center">
+      <div class="questionnaire-progress__wrapper">
+        <div class="questionnaire-progress">
+          <div
+            class="questionnaire-progress__section"
+            style="background-size: 33%"
+          ></div>
+          <div class="questionnaire-progress__section"></div>
+          <div class="questionnaire-progress__section"></div>
+        </div>
+      </div>
+    </div>
+    <div class="questionnaire__header--right">
+      <button class="button--close"><i class="icon-close"></i></button>
+    </div>
+  </div>
+  <div class="questionnaire__content">
+    <div class="questionnaire__title">
+      <h1>Подбор индивидуальной программы</h1>
+    </div>
+    <div class="questionnaire__description">
+      <p>
+        Пройдите анкету, отвечая на вопросы максимально честно, чтобы мы
+        определили ваше текущее состояние на данный момент и подобрали
+        подходящую программу.
+      </p>
+    </div>
+    <form method="post" action="#" class="form">
+      <fieldset class="form__section">
+        {{ fieldInput({ type: 'text', id: 'name', label: 'Имя', placeholder:
+        'Имя', status: '', notification: '' }) }}
+
+        <div class="form__input radio-switch">
+          <input type="radio" id="men" name="radio" value="men" checked />
+          <label for="men">Мужской</label>
+          <input type="radio" id="female" name="radio" value="female" />
+          <label for="female">Женский</label>
+        </div>
+
+        {{ fieldInput({ type: 'text', id: 'date', label: 'Дата рождения',
+        placeholder: 'ДД.ММ.ГГГГ', status: '', notification: '' }) }}
+      </fieldset>
+      <fieldset class="form__section form__section--submit">
+        {{ fieldButton({ tag: 'a', href: '../pages/step02.html', typeClass: '5',
+        disabled: 'disabled', content: 'Продолжить' }) }}
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

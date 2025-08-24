@@ -1,0 +1,15 @@
+<!--
+	КОМПОНЕНТ
+	Логотип сайта в шапке
+-->
+
+<div class="logo">
+  {% if clicable == true %}
+  <a href="../index.html">
+    {% endif %}
+    <img src="../img/logos/logo.svg" alt="Logo" />
+    {% if clicable == true %}
+    <span class="logo__text">Yoga Care</span>
+  </a>
+  {% endif %}
+</div>

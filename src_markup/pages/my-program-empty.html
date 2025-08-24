@@ -1,0 +1,24 @@
+{% set logged = "yes" %} {% extends "master/master.html" %} {% block content %}
+
+<div class="page page-program">
+  <section class="section section--01">
+    <div class="container">
+      <div class="section__content">
+        <h1 class="section__title">Ваша индивидуальная программа</h1>
+        <div class="section__description">
+          Сделайте занятия по Кундалини йоги максимально эффективными, подобрав
+          индивидуальную программу отвечающую вашим потребностям и возможностям.
+        </div>
+        {{ fieldButton({ tag: 'a', href: '../pages/my-program-first.html',
+        typeClass: '1', sizeClass: '1', content: 'Подобрать программу' }) }}
+      </div>
+      <img
+        class="section__pic"
+        src="../img/section/pic07.png"
+        alt="Yoga Care"
+      />
+    </div>
+  </section>
+</div>
+
+{% endblock %}

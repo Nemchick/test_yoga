@@ -1,0 +1,37 @@
+{% extends "master/questionnaire.html" %} {% block content %}
+
+<div class="questionnaire">
+  <div class="questionnaire__header">
+    <div class="questionnaire__header--left">
+      <a href="../pages/step14.html" class="back-link">
+        <i class="icon-back"></i>
+      </a>
+    </div>
+    <div class="questionnaire__header--center">
+      <div class="progress__wrapper">
+        <div class="progress__bar"></div>
+        <div class="progress__bar"></div>
+        <div class="progress__bar"></div>
+        <div class="progress__mask" style="left: 30%"></div>
+      </div>
+    </div>
+    <div class="questionnaire__header--right">
+      <button class="button--close"><i class="icon-close"></i></button>
+    </div>
+  </div>
+  <div class="questionnaire__content">
+    <div class="questionnaire__title">
+      <span>Тест Люшера</span>
+    </div>
+    <div class="questionnaire__description">
+      <h3>Выберите наиболее приятный для вас цвет</h3>
+    </div>
+    <div class="luscher__grid luscher__grid--two">
+      <div class="luscher__item" style="background: #00a602"></div>
+      <div class="luscher__item" style="background: #a95302"></div>
+    </div>
+    <div class="luscher__steps"><span>1 / 29</span></div>
+  </div>
+</div>
+
+{% endblock %}

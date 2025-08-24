@@ -1,0 +1,140 @@
+{% set logged = "yes" %} {% extends "master/master.html" %} {% block content %}
+
+<div class="page page-library">
+  <div class="container">
+    <div class="page__header page__header--link">
+      <a href="pages/library.html" class="back-link"
+        ><i class="icon-back"></i>Программа «Зарядиться энергией»</a
+      >
+    </div>
+    <div class="library-video__grid">
+      <div class="library-video__wrapper">
+        <div class="program-video">
+          <div class="program-video__content">
+            <img
+              class="program-video__overlay"
+              src="../img/backgrounds/video-bg.jpg"
+              alt=""
+            />
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/dLYsETBjNuI"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="program-video__controls program-video__controls--top">
+            <div class="program-video__favorite">
+              <i class="icon-favorite"></i>
+            </div>
+          </div>
+          <div class="program-video__controls">
+            <button class="button button--s2 button--t1">
+              <i class="icon-play"></i><span>Начать занятие</span>
+            </button>
+            <div class="program-video__status">
+              <div class="lessons__count">2/120</div>
+              <span class="tooltip">Вы делаете эту практику 2 дня из 120</span>
+            </div>
+          </div>
+        </div>
+        <div class="program-video">
+          <div class="program-video__content">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/dLYsETBjNuI"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <button class="button button--s4 button--t6">
+              Пропустить заставку
+            </button>
+          </div>
+        </div>
+
+        <div class="program-video__title">
+          <h3>Восстановить силы после долгого дня</h3>
+          <div class="program-video__info">
+            <span class="program-video__duration">10 мин.</span>
+            <i class="icon-favorite"></i>
+          </div>
+        </div>
+        <p class="library-video__description">
+          Практика для идеального завершения долгого дня. Снимет усталость,
+          поможет расслабиться и отвлечься от дневных забот. Настроит на крепкий
+          безмятежный сон.
+        </p>
+      </div>
+    </div>
+    <div class="library-video__grid">
+      <div class="library-video__wrapper">
+        <div class="program-video">
+          <div class="program-video__content"></div>
+          <div class="program-video__blocked"><i class="icon-lock"></i></div>
+        </div>
+        <div class="program-video__title">
+          <h3>Восстановить силы после долгого дня</h3>
+          <div class="program-video__info">
+            <span class="program-video__duration">10 мин.</span>
+            <i class="icon-favorite"></i>
+          </div>
+        </div>
+        <p class="library-video__description">
+          Практика для идеального завершения долгого дня. Снимет усталость,
+          поможет расслабиться и отвлечься от дневных забот. Настроит на крепкий
+          безмятежный сон.
+        </p>
+      </div>
+      <div class="subscribes">
+        <h3 class="subscribes__title">
+          Получите доступ к видео и библиотеке крий и медитаций
+        </h3>
+        <div class="subscribes__item">
+          <div class="subscribes__description">
+            <div class="subscribes__info">
+              <div class="subscribes__term">1 месяц</div>
+              <div class="subscribes__price">400 ₽</div>
+            </div>
+          </div>
+        </div>
+        <div class="subscribes__item">
+          <div class="subscribes__description">
+            <div class="subscribes__info">
+              <div class="subscribes__term">6 месяцев</div>
+              <div class="subscribes__discount">20%</div>
+              <div class="subscribes__notice">320 ₽/мес.</div>
+              <div class="subscribes__price">1 920 ₽</div>
+            </div>
+          </div>
+        </div>
+        <div class="subscribes__item yearly">
+          <div class="subscribes__description">
+            <div class="subscribes__info">
+              <div class="subscribes__term">12 месяцев</div>
+              <div class="subscribes__discount">40%</div>
+              <div class="subscribes__notice">280 ₽/мес.</div>
+              <div class="subscribes__price">3 360 ₽</div>
+            </div>
+          </div>
+        </div>
+        <span class="subscribes__subtitle">или приобретите одно видео</span>
+        <div class="subscribes__item">
+          <div class="subscribes__description">
+            <div class="subscribes__info">
+              <div class="subscribes__term">Практика «Здоровый сон»</div>
+              <div class="subscribes__price">2 290 ₽</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

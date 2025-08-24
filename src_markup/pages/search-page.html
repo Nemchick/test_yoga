@@ -1,0 +1,203 @@
+{% set logged = "yes" %} {% extends "master/master.html" %} {% block content %}
+
+<div class="page page-library">
+  <div class="container">
+    <div class="page__header page__header--link">
+      <a href="pages/library.html" class="back-link"
+        ><i class="icon-back"></i>Библиотека</a
+      >
+      <div class="page__title">
+        <h1>Поиск</h1>
+        <form action="#" method="GET" class="search">
+          <button type="submit" value="" class="search__button">
+            <i class="icon-search"></i>
+          </button>
+          <input
+            type="text"
+            id="search-library"
+            name="search-library"
+            value=""
+            placeholder="Поиск по истории"
+          />
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="search-filter__wrapper">
+      <ul class="search-filter__category">
+        <li>
+          <a href="#" class="search-filter__link active"
+            >Крийи и медитации <span class="counter">(11)</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="search-filter__link"
+            >Музыка и мантры <span class="counter">(8)</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="search-filter__link"
+            >Статьи <span class="counter">(1)</span></a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="search-filter__wrapper">
+      <div class="search-filter__tags">
+        <div class="search-filter__tag active">
+          до 15 минут <i class="icon-close"></i>
+        </div>
+        <div class="search-filter__tag">до 30 минут</div>
+        <div class="search-filter__tag">до 60 минут</div>
+        <div class="search-filter__tag">до 90 минут</div>
+        <div class="search-filter__tag">> 90 минут</div>
+      </div>
+      <div class="search-filter__sort">
+        <div class="search-filter__title" data-select>
+          Сортировка: <span>по релевантности</span
+          ><i class="icon-arrow-down"></i>
+        </div>
+        <ul class="search-filter__list" data-select-list>
+          <li>
+            <span class="selected">qwrqwrqwrqwrqwr</span>
+          </li>
+          <li>
+            <span>qwrqwrqwrqwrqwr</span>
+          </li>
+        </ul>
+      </div>
+      <script>
+        let select = document.querySelector('[data-select]')
+        let selectList = document.querySelector('[data-select-list]')
+        select.addEventListener('click', (event) => {
+          select.classList.toggle('active')
+          selectList.classList.toggle('open')
+        })
+      </script>
+    </div>
+  </div>
+  <section class="section section--library">
+    <div class="loader__wrapper">
+      <span class="loader"></span>
+    </div>
+  </section>
+  <div class="container">
+    <ul class="search-result__list" data-lazy>
+      <li class="library-slider__item">
+        <div class="library-slider__img">
+          <div class="library-slider__overlay">
+            <a href="pages/library-video.html" class="button-play"
+              ><i class="icon-play"></i
+            ></a>
+          </div>
+          <img data-src="/img/elements/lesson.png" alt="" />
+        </div>
+        <div class="library-slider__info">
+          <span class="library-slider__name"
+            >Восстановить силы после долгого дня</span
+          >
+          <span class="library-slider__duration">10 мин.</span>
+        </div>
+      </li>
+      <li class="library-slider__item">
+        <div class="library-slider__img">
+          <div class="library-slider__overlay">
+            <a href="pages/library-video.html" class="button-play"
+              ><i class="icon-play"></i
+            ></a>
+          </div>
+          <img data-src="/img/elements/lesson.png" alt="" />
+        </div>
+        <div class="library-slider__info">
+          <span class="library-slider__name"
+            >Восстановить силы после долгого дня</span
+          >
+          <span class="library-slider__duration">10 мин.</span>
+        </div>
+      </li>
+      <li class="library-slider__item">
+        <div class="library-slider__img">
+          <div class="library-slider__overlay">
+            <a href="pages/library-video.html" class="button-play"
+              ><i class="icon-play"></i
+            ></a>
+          </div>
+          <img data-src="/img/elements/lesson.png" alt="" />
+        </div>
+        <div class="library-slider__info">
+          <span class="library-slider__name"
+            >Восстановить силы после долгого дня</span
+          >
+          <span class="library-slider__duration">10 мин.</span>
+        </div>
+      </li>
+      <li class="library-slider__item">
+        <div class="library-slider__img">
+          <div class="library-slider__overlay">
+            <a href="pages/library-video.html" class="button-play"
+              ><i class="icon-play"></i
+            ></a>
+          </div>
+          <img data-src="/img/elements/lesson.png" alt="" />
+        </div>
+        <div class="library-slider__info">
+          <span class="library-slider__name"
+            >Восстановить силы после долгого дня</span
+          >
+          <span class="library-slider__duration">10 мин.</span>
+        </div>
+      </li>
+      <li class="library-slider__item">
+        <div class="library-slider__img">
+          <div class="library-slider__overlay">
+            <a href="pages/library-video.html" class="button-play"
+              ><i class="icon-play"></i
+            ></a>
+          </div>
+          <img data-src="/img/elements/lesson.png" alt="" />
+        </div>
+        <div class="library-slider__info">
+          <span class="library-slider__name"
+            >Восстановить силы после долгого дня</span
+          >
+          <span class="library-slider__duration">10 мин.</span>
+        </div>
+      </li>
+      <li class="library-slider__item">
+        <div class="library-slider__img">
+          <div class="library-slider__overlay">
+            <a href="pages/library-video.html" class="button-play"
+              ><i class="icon-play"></i
+            ></a>
+          </div>
+          <img data-src="/img/elements/lesson.png" alt="" />
+        </div>
+        <div class="library-slider__info">
+          <span class="library-slider__name"
+            >Восстановить силы после долгого дня</span
+          >
+          <span class="library-slider__duration">10 мин.</span>
+        </div>
+      </li>
+      <li class="library-slider__item">
+        <div class="library-slider__img">
+          <div class="library-slider__overlay">
+            <a href="pages/library-video.html" class="button-play"
+              ><i class="icon-play"></i
+            ></a>
+          </div>
+          <img data-src="/img/elements/lesson.png" alt="" />
+        </div>
+        <div class="library-slider__info">
+          <span class="library-slider__name"
+            >Восстановить силы после долгого дня</span
+          >
+          <span class="library-slider__duration">10 мин.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+{% endblock %}

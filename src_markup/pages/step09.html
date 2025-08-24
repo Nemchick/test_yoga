@@ -1,0 +1,40 @@
+{% extends "master/questionnaire.html" %} {% block content %}
+
+<div class="questionnaire questionnaire--step09">
+  <div class="questionnaire__header">
+    <div class="questionnaire__header--left">
+      <a href="../pages/step08.html" class="back-link">
+        <i class="icon-back"></i>
+      </a>
+    </div>
+    <div class="questionnaire__header--center">
+      <div class="progress__wrapper">
+        <div class="progress__bar"></div>
+        <div class="progress__bar"></div>
+        <div class="progress__bar"></div>
+        <div class="progress__mask" style="left: 30%"></div>
+      </div>
+    </div>
+    <div class="questionnaire__header--right">
+      <button class="button--close"><i class="icon-close"></i></button>
+    </div>
+  </div>
+  <div class="questionnaire__content">
+    <div class="questionnaire__title">
+      <img src="../img/icons/relations.svg" alt="" />
+      <h1>Отношения</h1>
+    </div>
+    <div class="questionnaire__description">
+      <p>Вы хотите улучшить свои коммуникативные навыки?</p>
+    </div>
+    <form method="post" action="#" class="form form--level">
+      <fieldset class="form__section form__section--submit">
+        {{ fieldButton({ tag: 'a', href: '../pages/step10.html', typeClass: '1',
+        content: 'Да' }) }} {{ fieldButton({ tag: 'a', href:
+        '../pages/step10.html', typeClass: '1', content: 'Нет' }) }}
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

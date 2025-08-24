@@ -1,0 +1,24 @@
+<div class="form-wrapper">
+  <form method="post" action="#" class="form form--restore">
+    <div class="form__heading">
+      <h2 class="form__title">Восстановление пароля</h2>
+      <div class="form__subtitle">
+        Введите e-mail, который вы <br />использовали при регистрации
+      </div>
+    </div>
+    <fieldset class="form__section">
+      {{ fieldInput({ type: 'text', id: 'login', label: 'E-mail', placeholder:
+      'Введите e-mail', status: '', notification: '' }) }} {{ fieldButton({ tag:
+      'button', type: 'submit', typeClass: '1', sizeClass: '1', content:
+      'Восстановить' }) }}
+    </fieldset>
+  </form>
+  <div class="socials__description">
+    <p>или авторизуйтесь через соцсеть</p>
+  </div>
+  {{ block("components/socials") }}
+  <div class="form__links">
+    <a href="pages/login.html">Войти</a>
+    <a href="pages/registration.html">Зарегистрироваться</a>
+  </div>
+</div>

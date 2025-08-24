@@ -1,0 +1,64 @@
+{% extends "master/questionnaire.html" %} {% block content %}
+
+<div class="questionnaire questionnaire--step18">
+  <div class="questionnaire__header">
+    <div class="questionnaire__header--left">
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../img/logos/logo-white.svg" alt="" />
+        </a>
+      </div>
+    </div>
+    <div class="questionnaire__header--center">
+      <div class="progress__wrapper">
+        <div class="progress__bar"></div>
+        <div class="progress__bar"></div>
+        <div class="progress__bar"></div>
+        <div class="progress__mask" style="left: 30%"></div>
+      </div>
+    </div>
+    <div class="questionnaire__header--right">
+      <button class="button--close"><i class="icon-close"></i></button>
+    </div>
+  </div>
+  <div class="questionnaire__content">
+    <div class="questionnaire-form">
+      <div class="questionnaire-form__wrapper">
+        <form class="form" method="post" action="#">
+          <div class="questionnaire__title">
+            <img src="../img/icons/accept.svg" alt="" />
+            <h1>Ваша персональная программа готова</h1>
+          </div>
+          <div class="questionnaire__description">
+            <p>
+              Укажите ваш e-mail, мы отправим подробности программы на вашу
+              почту. Сразу после регистрации вам будет бесплатно доступна первая
+              практика.
+            </p>
+          </div>
+          <fieldset class="form__section">
+            {{ fieldInput({ type: 'email', id: 'email', label: '', placeholder:
+            'E-mail', status: '', notification: '' }) }} {{ fieldButton({ tag:
+            'button', type: 'submit', typeClass: '1', content:
+            'Зарегистрироваться' }) }}
+          </fieldset>
+        </form>
+        <div class="socials__description">
+          <p>или авторизуйтесь через соцсеть</p>
+        </div>
+        {{ block("components/socials") }}
+      </div>
+      <div class="form__img">
+        <picture>
+          <source
+            srcset="../img/elements/form-img.jpg"
+            media="(min-width: 680px)"
+          />
+          <img src="../img/elements/form-img-mob.jpg" alt="" />
+        </picture>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+.footer-menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  &__item {
+    &:not(:first-child) {
+      margin-left: 60px;
+    }
+  }
+  &__item-link {
+    &:hover {
+      opacity: 0.4;
+    }
+  }
+}

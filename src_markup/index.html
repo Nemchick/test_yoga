@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Yoga Care</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		* {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		html,
+		body {
+			height: 100%;
+			width: 100%;
+			font-size: 14px;
+			font-family: 'Roboto',sans-serif;
+		}
+		body {
+			background: url("img/backgrounds/page-form-bg.png") center no-repeat;
+			background-size: cover;
+		}
+
+		section {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		@supports (display: grid) {
+			section {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+				grid-gap: 10px;
+				padding: 10px;
+			}
+		}
+		section div {
+			width: 32%;
+			margin: 0 1% 1% 0;
+			border-radius: 12px;
+			padding-bottom: 15px;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(50px);
+		}
+		@supports (display: grid) {
+			section div {
+				width: 100%;
+				margin: 0;
+			}
+		}
+		h2 {
+			font-size: 22px;
+			line-height: 30px;
+			font-family: "Roboto", sans-serif;
+			color: #374957;
+			font-weight: 500;
+			text-align: center;
+			letter-spacing: .05em;
+			border-bottom: 1px solid #FFFFFF;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			margin: 0 10px 15px;
+		}
+		ul h2 {
+			margin-top: 10px;
+		}
+		.btn-primary {
+			display: flex;
+			box-sizing: border-box;
+			width: 100%;
+			min-height: 40px;
+			font-size: 14px;
+			line-height: 14px;
+			font-family: "Roboto", sans-serif;
+			font-weight: 400;
+			text-align: center;
+			text-decoration: none;
+			border-radius: 12px;
+			padding: 0 10px;
+            background: #EAEFF3;
+            cursor: default;
+            color: #D6E0E8;
+			align-items: center;
+			margin: auto;
+			justify-content: center;
+			transition: background-color .2s ease-out, box-shadow .2s ease-out;
+		}
+		.btn-primary.done {
+			background-color: #59CA56;
+			color: #FFFFFF;
+			transition: background-color .2s ease-out;
+            cursor: pointer;
+		}
+        .btn-primary.done:hover {
+            background-color: #3AB737;
+        }
+		.btn-primary.processing {
+			background-color: #FFA400;
+			color: #fff;
+			transition: background-color .2s ease-out;
+		}
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 0 10px;
+		}
+		ul li {
+			margin: 0 1% 1% 0;
+		}
+		sup {
+			display: inline-block;
+			color: white;
+			font-weight: 300;
+			padding: 10px;
+			opacity: .75;
+		}
+		sup p {
+			padding: 5px 0;
+		}
+		sup span {
+			display: inline-block;
+			min-width: 10px;
+			text-align: center;
+		}
+		@supports (display: grid) {
+			ul {
+				display: grid;
+				grid-gap: 10px;
+				grid-template-columns: repeat(auto-fill, minmax(32%, auto));
+				margin: 0;
+			}
+		}
+		@media (max-width:580px) {
+			@supports (display: grid) {
+				section {
+					grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+				}
+			}
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<div>
+			<h2>Лендинг</h2>
+			<ul>
+				<li><a href="pages/index.html" class="btn-primary done">Лендинг</a></li>
+				<li><a href="pages/404.html" class="btn-primary done">Error 404</a></li>
+			</ul>
+		</div>
+		<div>
+			<h2>Анкета</h2>
+			<ul>
+                <li><a href="pages/step01.html" class="btn-primary done">Step01</a></li>
+                <li><a href="pages/step02.html" class="btn-primary done">Step02</a></li>
+                <li><a href="pages/step03.html" class="btn-primary done">Step03</a></li>
+                <li><a href="pages/step04.html" class="btn-primary done">Step04</a></li>
+                <li><a href="pages/step05.html" class="btn-primary done">Step05</a></li>
+                <li><a href="pages/step06.html" class="btn-primary done">Step06</a></li>
+                <li><a href="pages/step07.html" class="btn-primary done">Step07</a></li>
+                <li><a href="pages/step08.html" class="btn-primary done">Step08</a></li>
+                <li><a href="pages/step09.html" class="btn-primary done">Step09</a></li>
+                <li><a href="pages/step10.html" class="btn-primary done">Step10</a></li>
+                <li><a href="pages/step11.html" class="btn-primary done">Step11</a></li>
+                <li><a href="pages/step12.html" class="btn-primary done">Step12</a></li>
+                <li><a href="pages/step13.html" class="btn-primary done">Step13</a></li>
+                <li><a href="pages/step15.html" class="btn-primary done">Step14</a></li>
+                <li><a href="pages/step16.html" class="btn-primary done">Step15</a></li>
+                <li><a href="pages/step17.html" class="btn-primary done">Step16</a></li>
+                <li><a href="pages/step17.html" class="btn-primary done">Step17</a></li>
+                <li><a href="pages/step18.html" class="btn-primary done">Step18</a></li>
+			</ul>
+		</div>
+        <div>
+            <h2>Регистрация</h2>
+            <ul>
+                <li><a href="pages/login.html" class="btn-primary done">Login</a></li>
+                <li><a href="pages/registration.html" class="btn-primary done">Registration</a></li>
+                <li><a href="pages/restore_request.html" class="btn-primary done">Restore Password</a></li>
+                <li><a href="pages/restore_confirm.html" class="btn-primary done">Restore Confirm</a></li>
+                <li><a href="pages/reset_password.html" class="btn-primary done">Reset Password</a></li>
+            </ul>
+        </div>
+
+		<div>
+			<h2>Моя программа</h2>
+			<ul>
+                <li><a href="pages/my-program-empty.html" class="btn-primary done">Моя программа (не подобрана)</a></li>
+                <li><a href="pages/my-program-first.html" class="btn-primary done">Моя программа (первое посещение)</a></li>
+				<li><a href="pages/my-program-final.html" class="btn-primary done">Моя программа (финал)</a></li>
+			</ul>
+		</div>
+
+		<div>
+			<h2>Избранное</h2>
+			<ul>
+                <li><a href="pages/library-favorite-empty.html" class="btn-primary done">Избранное (пусто)</a></li>
+                <li><a href="pages/library-favorite.html" class="btn-primary done">Избранное</a></li>
+			</ul>
+		</div>
+		<div>
+			<h2>Библиотека</h2>
+			<ul>
+                <li><a href="pages/library.html" class="btn-primary done">Библиотека</a></li>
+                <li><a href="pages/library-category.html" class="btn-primary done">Библиотека категория</a></li>
+                <li><a href="pages/library-category-noslider.html" class="btn-primary done">Библиотека категория (без слайдера)</a></li>
+                <li><a href="pages/library-video.html" class="btn-primary done">Библиотека видео</a></li>
+                <li><a href="pages/library-article.html" class="btn-primary done">Библиотека статья</a></li>
+			</ul>
+		</div>
+        <div>
+            <h2>Профиль</h2>
+            <ul>
+                <li><a href="pages/my-subscribes.html" class="btn-primary done">Моя подписка</a></li>
+                <li><a href="pages/unsubscribe.html" class="btn-primary done">Отмена подписки</a></li>
+                <li><a href="pages/change-password.html" class="btn-primary done">Смена пароля</a></li>
+                <li><a href="pages/new-password.html" class="btn-primary done">Новый пароль</a></li>
+                <li><a href="pages/change-password-success.html" class="btn-primary done">Пароль сохранен</a></li>
+            </ul>
+        </div>
+        <div>
+            <h2>История</h2>
+            <ul>
+                <li><a href="pages/history.html" class="btn-primary done">История</a></li>
+                <li><a href="pages/search-page.html" class="btn-primary done">Поиск</a></li>
+            </ul>
+        </div>
+		<div>
+			<h2>Модальные окна</h2>
+			<ul>
+				<li><a href="pages/quote.html" class="btn-primary done">Цитата</a></li>
+				<li><a href="pages/sharing.html" class="btn-primary done">Шеринг</a></li>
+				<li><a href="pages/amount-of-days.html" class="btn-primary done">Количество дней</a></li>
+				<li><a href="pages/new-modal.html" class="btn-primary done">New modal</a></li>
+			</ul>
+		</div>
+	</section>
+
+</body>
+
+</html>

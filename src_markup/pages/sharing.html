@@ -1,0 +1,542 @@
+{% set logged = "yes" %} {% extends "master/master.html" %} {% block content %}
+
+<div class="page page-program">
+  <section class="section section--video">
+    <div class="container">
+      <div class="program-video__wrapper">
+        <div class="progress">
+          <p class="progress__title">Мой путь к цели</p>
+          <div class="progress-bar__wrapper">
+            <div class="progress-bar"></div>
+            <div class="progress-bar__mask" style="left: 50%"></div>
+          </div>
+        </div>
+        <div class="program-video__notice">
+          <i class="icon-info"></i>
+          <p>Пробное занятие доступно 7 дней. <span>Осталось 7 дней</span></p>
+        </div>
+        <div class="program-video">
+          <div class="program-video__content"></div>
+          <div class="program-video__controls program-video__controls--top">
+            <div class="program-video__favorite">
+              <i class="icon-favorite"></i>
+            </div>
+          </div>
+          <div class="program-video__controls">
+            <button class="button button--s2 button--t1">
+              <i class="icon-play"></i>Начать занятие
+            </button>
+            <div class="program-video__status">
+              <i class="icon-calendar"></i>
+            </div>
+          </div>
+        </div>
+        <div class="program-video">
+          <div class="program-video__content"></div>
+          <div class="program-video__controls program-video__controls--top">
+            <div class="program-video__favorite">
+              <i class="icon-favorite"></i>
+            </div>
+          </div>
+          <div class="program-video__controls">
+            <button class="button button--s2 button--t1">
+              <i class="icon-play"></i>Начать занятие
+            </button>
+            <div class="program-video__status">
+              <div class="lessons__count">2/120</div>
+              <span class="tooltip">Вы делаете эту практику 2 дня из 120</span>
+            </div>
+          </div>
+        </div>
+        <div class="program-video__title">
+          <h2>Практика «Здоровый сон»</h2>
+          <div class="program-video__info">
+            <div class="program-video__duration">20 минут</div>
+            <i class="icon-favorite"></i>
+          </div>
+        </div>
+        <div class="program-video__description">
+          <p>
+            Практика для идеального завершения долгого дня. Снимет усталость,
+            поможет расслабиться и отвлечься от дневных забот. Настроит на
+            крепкий безмятежный сон.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--program">
+    <div class="container">
+      <div class="subscribes__wrapper">
+        <h3 class="subscribes__title">
+          Получите полный доступ к вашей программе
+        </h3>
+        <div class="program__description">
+          Продолжайте заниматься по программе — только ежедвневная практика
+          позволит достигнуть желаемых результатов.
+        </div>
+        <div class="subscribes">
+          <div class="subscribes__item">
+            <div class="subscribes__description">
+              <div class="subscribes__term">1 месяц</div>
+              <div class="subscribes__info">
+                <div class="subscribes__price">400 ₽</div>
+              </div>
+            </div>
+          </div>
+          <div class="subscribes__item">
+            <div class="subscribes__description">
+              <div class="subscribes__term">6 месяцев</div>
+              <div class="subscribes__info">
+                <div class="subscribes__discount">20%</div>
+                <div class="subscribes__notice">320 ₽/мес.</div>
+                <div class="subscribes__price">1 920 ₽</div>
+              </div>
+            </div>
+          </div>
+          <div class="subscribes__item yearly">
+            <div class="subscribes__description">
+              <div class="subscribes__term">12 месяцев</div>
+              <div class="subscribes__info">
+                <div class="subscribes__discount">40%</div>
+                <div class="subscribes__notice">280 ₽/мес.</div>
+                <div class="subscribes__price">3 360 ₽</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feedback__wrapper">
+        <div class="swiper" data-slider-feedback>
+          <ul class="swiper-wrapper">
+            {% for item in range(0, 15) %}
+            <li class="swiper-slide feedback-slider__item">
+              <div class="feedback__rating">
+                <i class="icon-star filled"></i>
+                <i class="icon-star filled"></i>
+                <i class="icon-star filled"></i>
+                <i class="icon-star filled"></i>
+                <i class="icon-star"></i>
+              </div>
+              <div class="feedback__content">
+                Прошла программу «Глубокая релаксация» и очень довольна
+                результатом. Буду продолжать занятия.
+              </div>
+              <div class="feedback__name">Инна</div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+    <img class="program__bg" src="/img/backgrounds/program-bg.png" />
+  </section>
+  <section class="section section--program-description">
+    <img
+      src="../img/backgrounds/program-description-bg.jpg"
+      class="program-description__img"
+      alt=""
+    />
+    <div class="container">
+      <div class="program-description">
+        <div class="program-description__name">Моя программа</div>
+        <h3 class="program-description__title">Глубокая релаксация</h3>
+        <p>
+          Эта специально составленная программа акцентирует расслабляющий аспект
+          практики йоги Айенгара. Наряду с супта-асанами (позами, выполняемыми
+          лежа на спине) в ней есть асаны, раскрывающие солнечное сплетение и
+          диафрагму – область, где длительный стресс вызывает мышечный зажим,
+          влияющий не только на эмоциональный фон, но и на работу внутренних
+          органов.
+        </p>
+        <p>
+          Кроме того, во время занятия выполняются пассивные вариации
+          перевёрнутых поз. Перевёрнутые асаны благотворное влияют на головной
+          мозг и нервную систему в целом. А пассивное выполнение позволяет
+          пребывать в позах дольше, что углубляет их воздействия.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="section section--lessons">
+    <div class="lessons-slider" data-lazy>
+      <!-- If we need pagination -->
+      <div class="swiper" data-slider-program>
+        <ul class="swiper-wrapper">
+          {% for item in range(0, 15) %}
+          <li class="swiper-slide lessons-slider__item">
+            <div class="lessons__status"><i class="icon-check"></i></div>
+            <div class="lessons-slider__img">
+              <div class="lessons-slider__blocked">
+                <i class="icon-lock"></i>
+              </div>
+              <img data-src="/img/elements/lesson.png" alt="" />
+            </div>
+            <div class="lessons-slider__info">
+              <span class="lessons-slider__name"
+                >Восстановить силы после долгого дня</span
+              >
+              <span class="lessons-slider__duration">10 мин.</span>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+        <!-- navigation buttons -->
+        <div class="lessons-slider__controls">
+          <div class="slider-button slider-button__prev">
+            <i class="icon-arrow-left"></i>
+          </div>
+          <div class="slider-button slider-button__next">
+            <i class="icon-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--lessons">
+    <div class="lessons-slider" data-lazy>
+      <!-- If we need pagination -->
+      <div class="swiper" data-slider-program>
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide lessons-slider__item">
+            <div class="lessons__status viewed"><i class="icon-check"></i></div>
+            <div class="lessons-slider__img">
+              <div class="lessons-slider__overlay">
+                <button class="button-play"><i class="icon-play"></i></button>
+              </div>
+              <div class="lessons-slider__status">
+                <span>120 / 120</span>
+              </div>
+              <img data-src="/img/elements/lesson.png" alt="" />
+            </div>
+            <div class="lessons-slider__info">
+              <span class="lessons-slider__name"
+                >Восстановить силы после долгого дня</span
+              >
+              <span class="lessons-slider__duration">10 мин.</span>
+            </div>
+          </li>
+          {% for item in range(0, 14) %}
+          <li class="swiper-slide lessons-slider__item">
+            <div class="lessons__status"><i class="icon-check"></i></div>
+            <div class="lessons-slider__img">
+              <div class="lessons-slider__overlay">
+                <button class="button-play"><i class="icon-play"></i></button>
+              </div>
+              <div class="lessons-slider__status">
+                <i class="icon-calendar"></i>
+              </div>
+              <img data-src="/img/elements/lesson.png" alt="" />
+            </div>
+            <div class="lessons-slider__info">
+              <span class="lessons-slider__name"
+                >Восстановить силы после долгого дня</span
+              >
+              <span class="lessons-slider__duration">10 мин.</span>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+        <!-- navigation buttons -->
+        <div class="lessons-slider__controls">
+          <div class="slider-button slider-button__prev">
+            <i class="icon-arrow-left"></i>
+          </div>
+          <div class="slider-button slider-button__next">
+            <i class="icon-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--sharing">
+    <div class="container">
+      <div class="sharing__wrapper">
+        <h3 class="sharing__title">Мои шеринги</h3>
+        <div class="sharing__description">
+          <div class="icon__wrapper">
+            <i class="icon-activity"></i>
+          </div>
+          <p>
+            Здесь будет отображаться история ваших шерингов и динамика
+            результатов. Делитесь впечатлениями после каждого занятия, пройдя
+            короткий опрос.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--sharing">
+    <div class="container">
+      <div class="sharing__wrapper">
+        <h3 class="sharing__title">Мои шеринги</h3>
+        <div class="sharing__graph">
+          <img src="../img/elements/graph.svg" />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="sharing__wrapper">
+        <h3 class="sharing__title">Я занимаюсь...</h3>
+        <div class="sharing__statistic">
+          <div class="statistic__row">
+            <div class="statistic__value">7</div>
+            <p class="statistic__desc">дней подряд</p>
+          </div>
+          <div class="statistic__row">
+            <div class="statistic__value">140</div>
+            <p class="statistic__desc">минут</p>
+          </div>
+          <div class="statistic__row">
+            <div class="statistic__value">1</div>
+            <p class="statistic__desc">крий завершено</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="sharing__wrapper">
+        <div class="sharing__choose">
+          <p>Не подходит программа? Подберите новую</p>
+          <a class="button button--s2 button--t1">Подобрать новую программу</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="recommendation">
+    <div class="recommendation__wrapper">
+      <div class="recommendation__img">
+        <img src="../img/elements/article.jpg" alt="" />
+      </div>
+      <div class="recommendation__content">
+        <p>Основы йоги</p>
+        <h3>Необходимые знания о Кундалини йоге</h3>
+        <a href="" class="read-more">Читать статью</a>
+      </div>
+    </div>
+    <button class="button-close"><i class="icon-close"></i></button>
+  </div>
+</div>
+<div class="modal__wrapper">
+  <div class="modal">
+    <button class="button--close"><i class="icon-close"></i></button>
+    <div class="modal__content">
+      <div class="modal__title">
+        <h3>Оцените своё состояние</h3>
+      </div>
+      <form method="post" action="#" class="form">
+        <fieldset class="form__section">
+          <p>Ощущения</p>
+          <div class="rating-group">
+            <input
+              disabled
+              checked
+              class="rating__input rating__input--none"
+              name="rating1"
+              id="rating1-none"
+              value="0"
+              type="radio"
+            />
+            <label aria-label="1 star" class="rating__label" for="rating1-1"
+              ><i class="rating__icon icon-lotus"></i
+            ></label>
+            <input
+              class="rating__input"
+              name="rating1"
+              id="rating1-1"
+              value="1"
+              type="radio"
+            />
+            <label aria-label="2 stars" class="rating__label" for="rating1-2"
+              ><i class="rating__icon icon-lotus"></i
+            ></label>
+            <input
+              class="rating__input"
+              name="rating1"
+              id="rating1-2"
+              value="2"
+              type="radio"
+            />
+            <label aria-label="3 stars" class="rating__label" for="rating1-3"
+              ><i class="rating__icon icon-lotus"></i
+            ></label>
+            <input
+              class="rating__input"
+              name="rating1"
+              id="rating1-3"
+              value="3"
+              type="radio"
+            />
+            <label aria-label="4 stars" class="rating__label" for="rating1-4"
+              ><i class="rating__icon icon-lotus"></i
+            ></label>
+            <input
+              class="rating__input"
+              name="rating1"
+              id="rating1-4"
+              value="4"
+              type="radio"
+            />
+            <label aria-label="5 stars" class="rating__label" for="rating1-5"
+              ><i class="rating__icon icon-lotus"></i
+            ></label>
+            <input
+              class="rating__input"
+              name="rating1"
+              id="rating1-5"
+              value="5"
+              type="radio"
+            />
+          </div>
+        </fieldset>
+        <fieldset class="form__section">
+          <p>Мысли</p>
+          <div class="rating-group">
+            <input
+              disabled
+              checked
+              class="rating__input rating__input--none"
+              name="rating2"
+              id="rating2-none"
+              value="0"
+              type="radio"
+            />
+            <label aria-label="1 star" class="rating__label" for="rating2-1"
+              ><i class="rating__icon icon-lotus"></i
+            ></label>
+            <input
+              class="rating__input"
+              name="rating2"
+              id="rating2-1"
+              value="1"
+              type="radio"
+            />
+            <label aria-label="2 stars" class="rating__label" for="rating2-2"
+              ><i class="rating__icon icon-lotus"></i
+            ></label>
+            <input
+              class="rating__input"
+              name="rating2"
+              id="rating2-2"
+              value="2"
+              type="radio"
+            />
+            <label aria-label="3 stars" class="rating__label" for="rating2-3"
+              ><i class="rating__icon icon-lotus"></i
+            ></label>
+            <input
+              class="rating__input"
+              name="rating2"
+              id="rating2-3"
+              value="3"
+              type="radio"
+            />
+            <label aria-label="4 stars" class="rating__label" for="rating2-4"
+              ><i class="rating__icon icon-lotus"></i
+            ></label>
+            <input
+              class="rating__input"
+              name="rating2"
+              id="rating2-4"
+              value="4"
+              type="radio"
+            />
+            <label aria-label="5 stars" class="rating__label" for="rating2-5"
+              ><i class="rating__icon icon-lotus"></i
+            ></label>
+            <input
+              class="rating__input"
+              name="rating2"
+              id="rating2-5"
+              value="5"
+              type="radio"
+            />
+          </div>
+        </fieldset>
+        <fieldset class="form__section">
+          <p>Чувства</p>
+          <div class="rating-group">
+            <input
+              disabled
+              checked
+              class="rating__input rating__input--none"
+              name="rating3"
+              id="rating3-none"
+              value="0"
+              type="radio"
+            />
+            <label aria-label="1 star" class="rating__label" for="rating3-1"
+              ><i class="rating__icon icon-lotus"></i
+            ></label>
+            <input
+              class="rating__input"
+              name="rating3"
+              id="rating3-1"
+              value="1"
+              type="radio"
+            />
+            <label aria-label="2 stars" class="rating__label" for="rating3-2"
+              ><i class="rating__icon icon-lotus"></i
+            ></label>
+            <input
+              class="rating__input"
+              name="rating3"
+              id="rating3-2"
+              value="2"
+              type="radio"
+            />
+            <label aria-label="3 stars" class="rating__label" for="rating3-3"
+              ><i class="rating__icon icon-lotus"></i
+            ></label>
+            <input
+              class="rating__input"
+              name="rating3"
+              id="rating3-3"
+              value="3"
+              type="radio"
+            />
+            <label aria-label="4 stars" class="rating__label" for="rating3-4"
+              ><i class="rating__icon icon-lotus"></i
+            ></label>
+            <input
+              class="rating__input"
+              name="rating3"
+              id="rating3-4"
+              value="4"
+              type="radio"
+            />
+            <label aria-label="5 stars" class="rating__label" for="rating3-5"
+              ><i class="rating__icon icon-lotus"></i
+            ></label>
+            <input
+              class="rating__input"
+              name="rating3"
+              id="rating3-5"
+              value="5"
+              type="radio"
+            />
+          </div>
+        </fieldset>
+        <fieldset class="form__section">
+          {{ fieldInput({ type: 'text', id: 'comment', placeholder:
+          'Комментарий...', status: '', notification: '' }) }}
+        </fieldset>
+        <fieldset class="form__section">
+          <div class="form__description">
+            <i class="icon-lightbulb"></i>
+            <p>
+              Задавайтесь этим вопрос время от времени, и это принесёт желаемое.
+            </p>
+          </div>
+        </fieldset>
+        <fieldset class="form__section">
+          {{ fieldButton({ tag: 'button', type: 'submit', typeClass: '1',
+          sizeClass: '1', disabled: 'disabled', content: 'Сохранить' }) }}
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

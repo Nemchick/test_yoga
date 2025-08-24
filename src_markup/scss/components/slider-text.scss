@@ -1,0 +1,47 @@
+.slider-text {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: 200px;
+    background: linear-gradient(
+      90deg,
+      #ffffff 0%,
+      #ffffff 40%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    z-index: 2;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    height: 100%;
+    width: 200px;
+    background: linear-gradient(
+      -90deg,
+      #ffffff 0%,
+      #ffffff 40%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    z-index: 2;
+  }
+  & .swiper-slide {
+    & span {
+      display: block;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #d6e0e8;
+      text-align: center;
+    }
+  }
+}

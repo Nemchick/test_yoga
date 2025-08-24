@@ -1,0 +1,14 @@
+{% set logged = "yes" %} {% extends "master/master.html" %} {% block content %}
+
+<div class="page page-user">
+  <div class="container">
+    <div class="page__header">
+      <a href="pages/my-subscribes.html" class="back-link"
+        ><i class="icon-back"></i> Моя подписка</a
+      >
+    </div>
+    {{ block("components/forms/form-unsubscribe") }}
+  </div>
+</div>
+
+{% endblock %}

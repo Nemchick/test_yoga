@@ -1,0 +1,121 @@
+.feedback {
+  &__wrapper {
+    position: relative;
+    max-width: 100%;
+    width: 442px;
+    z-index: 1;
+    padding: 24px 58px;
+    border-radius: 12px;
+    background: #ffffff;
+    & .swiper-button-next:after,
+    .swiper-button-prev:after {
+      font-size: 20px;
+      color: #a7bac9;
+    }
+  }
+  &-landing__wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1380px;
+    z-index: 1;
+    padding: 0 120px;
+    margin: 60px auto 100px auto;
+    & .feedback-slider__item {
+      padding: 40px;
+    }
+    & .swiper-button-next:after,
+    .swiper-button-prev:after {
+      font-size: 32px;
+      color: #a7bac9;
+    }
+  }
+  &__rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 24px;
+    color: #eaeff3;
+    & .rating__label {
+      font-size: 24px;
+    }
+    & i {
+      margin-right: 2px;
+      &.filled {
+        color: #ffe61e;
+      }
+    }
+  }
+  &__content {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 12px;
+  }
+  &__name {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  &__submitted {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    color: #a7bac9;
+    padding: 118px 0;
+    & p {
+      margin-bottom: 0;
+    }
+  }
+  &-random {
+    display: flex;
+    align-items: center;
+    max-width: 960px;
+    padding: 60px;
+    background: linear-gradient(
+      71.92deg,
+      rgba(0, 71, 110, 0.9) 0%,
+      rgba(57, 129, 55, 0.9) 100%
+    );
+    border-radius: 40px;
+    margin: 100px auto;
+    color: #ffffff;
+    text-align: center;
+    &__description {
+      padding-right: 60px;
+
+      font-size: 14px;
+      line-height: 24px;
+      font-style: italic;
+      & i {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+    }
+    &__author {
+      padding-left: 60px;
+      flex-shrink: 0;
+      border-left: 1px solid rgba(255, 255, 255, 0.3);
+      & img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    &__name {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      & span {
+        display: block;
+        font-weight: 400;
+      }
+    }
+  }
+}

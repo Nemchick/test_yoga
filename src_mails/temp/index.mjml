@@ -1,0 +1,85 @@
+
+<mjml>
+  <mj-head>
+    <mj-preview>Your Yoga Care</mj-preview>
+    <mj-title>Your Yoga Care</mj-title>
+    <mj-breakpoint width="320px"></mj-breakpoint>
+    <mj-attributes>
+      <mj-text padding="0"></mj-text>
+      <mj-class name="blue" color="black"></mj-class>
+      <mj-class name="big" font-size="18px" font-weight="bold"></mj-class>
+      <mj-class name="valigntop" padding-right="25px" line-height="120px"></mj-class>
+      <mj-class name="normal" font-size="15px"></mj-class>
+      <mj-class name="medium" font-size="14px"></mj-class>
+      <mj-class name="center" align="center"></mj-class>
+      <mj-class name="text-center" text-align="center"></mj-class>
+      <mj-class name="right" align="right"></mj-class>
+      <mj-class name="left" align="left"></mj-class>
+      <mj-class name="white" color="#ffffff"></mj-class>
+      <mj-class name="small" color="#1f1f1f" font-size="11px" line-height="14px"></mj-class>
+      <mj-class name="button" background-color="#343434" font-size="16px" font-weight="bold" padding="10px 30px"></mj-class>
+      <mj-class name="social" width="40px"></mj-class>
+      <mj-all font-family="Verdana,Arial,Helvetica,sans-serif"></mj-all>
+      <mj-styles>
+        <div class="table">
+          <max-width>
+            <600px></600px>
+          </max-width>
+        </div>
+      </mj-styles>
+    </mj-attributes>
+  </mj-head>
+  <mj-body>
+    <mj-wrapper border-radius="20px  20px 0 0" background-url="./img/bg.jpg" background-color="#000000" background-size="100%" background-repeat="repeat-y" background-position="bottom" padding="0">
+      <mj-section padding-bottom="0" full-width="full-width" background-color="#59CA56" padding="0">
+        <mj-group>
+          <mj-column padding="0">
+            <mj-image src="./img/logo-header.png" max-width="100%" width="65px" height="42px" padding="15px 0"></mj-image>
+          </mj-column>
+        </mj-group>
+      </mj-section>
+      <mj-section padding-bottom="0">
+        <mj-column background-color="rgba(255, 255, 255, 0.8)" padding="30px" width="90%" border-radius="15px" margin-top="15px">
+          <mj-text padding="0" align="center">
+            <h2 style="color:#000000; padding:0; margin:0; font-size:24px; vertical-align:middle; font-weight: 500; line-height:150%">Вы зарегистрированы на сайте YYC</h2>
+            <h3 style="color:#000000; padding:0; margin:32px 0; font-size:15px; vertical-align:middle; font-weight: 400; line-height:150%">
+              Вам подобрана программа <br>
+              <b>Практика «Здоровый сон»</b>.
+            </h3>
+            <p style="color:#000000; padding:0; margin:16px 0; font-size:16px; vertical-align:middle; font-weight: 500; line-height:150%">Практика для идеального завершения долгого дня. Снимет усталость, поможет расслабиться и отвлечься от дневных забот. Настроит на крепкий безмятежный сон.</p>
+          </mj-text>
+          <mj-image src="./img/article.jpg" max-width="100%" width="480px" padding="16px 0"></mj-image>
+          <mj-text padding="0" align="center">
+            <p style="color:#000000; padding:0; margin:16px 0; font-size:16px; vertical-align:middle; font-weight: 500; line-height:150%">Для того чтобы продолжить в личном кабинете перейдите по ссылке ниже:</p>
+          </mj-text>
+          <mj-button href="https://keekerun.fun/" background-color="#3AB737" font-weight="400" font-size="14px" border-radius="12px" padding="15px">Войти в кабинет</mj-button>
+        </mj-column>
+      </mj-section>
+      <mj-section padding="16px 0 0 0" text-align="center" width="100%">
+        <mj-column>
+          <mj-image src="./img/logo-header.png" max-width="100%" width="65px"></mj-image>
+        </mj-column>
+      </mj-section>
+      <mj-section padding="0 25px" text-align="center">
+        <mj-text>
+          <h2 style="color:#000000; padding:12px 0 0; margin:0; font-size:18px; vertical-align:middle; font-weight:500; text-align:center">Мы в социальных сетях</h2>
+        </mj-text>
+      </mj-section>
+      <mj-section padding="20px 0 12px" text-align="center">
+        <mj-social>
+          <mj-social-element href="#" src="./img/instagram.png" padding="0 10px" icon-size="20px"></mj-social-element>
+          <mj-social-element href="#" src="./img/facebook.png" padding="0 10px" icon-size="20px"></mj-social-element>
+          <mj-social-element href="#" src="./img/vk.png" padding="0 10px" icon-size="20px"></mj-social-element>
+          <mj-social-element href="#" src="./img/youtube.png" padding="0 10px" icon-size="20px"></mj-social-element>
+        </mj-social>
+      </mj-section>
+      <mj-section padding="20px">
+        <mj-column>
+          <mj-text mj-class="blue medium center" padding="0">
+            <p style="font-size:14px; color:#000000; margin:0; line-height: 150%">Если Вы получили это письмо случайно, для отписки нажмите <a rel="noopener noreferrer" href="{{unsubscribe_url}}" style="border: 0px; color: #000000;">здесь</a></p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

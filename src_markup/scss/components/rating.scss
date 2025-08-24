@@ -1,0 +1,60 @@
+.rating-group {
+  display: inline-flex;
+}
+.rating__icon {
+  pointer-events: none;
+}
+.rating__input {
+  position: absolute !important;
+  left: -9999px !important;
+}
+.rating__label {
+  cursor: pointer;
+  padding: 0 6px;
+  font-size: 44px;
+  & i {
+    background: linear-gradient(71.92deg, #009ff5 0%, #59ca56 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}
+
+.rating__icon--none {
+  color: #eee;
+}
+.rating__input--none:checked + .rating__label .rating__icon--none {
+  color: red;
+}
+.rating__input:checked ~ .rating__label i {
+  background: #eaeff3;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.rating-group:hover .rating__label i {
+  background: linear-gradient(71.92deg, #009ff5 0%, #59ca56 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.rating__input:hover ~ .rating__label i {
+  background: #eaeff3;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.rating-group:hover
+  .rating__input--none:not(:hover)
+  + .rating__label
+  .rating__icon--none {
+  color: #eee;
+}
+.rating__input--none:hover + .rating__label .rating__icon--none {
+  color: red;
+}

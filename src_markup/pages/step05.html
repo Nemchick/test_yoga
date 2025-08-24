@@ -1,0 +1,120 @@
+{% extends "master/questionnaire.html" %} {% block content %}
+
+<div class="questionnaire questionnaire--step05">
+  <div class="questionnaire__header">
+    <div class="questionnaire__header--left">
+      <a href="../pages/step04.html" class="back-link">
+        <i class="icon-back"></i>
+      </a>
+    </div>
+    <div class="questionnaire__header--center">
+      <div class="questionnaire-progress__wrapper">
+        <div class="questionnaire-progress">
+          <div
+            class="questionnaire-progress__section"
+            style="background-size: 63%"
+          ></div>
+          <div class="questionnaire-progress__section"></div>
+          <div class="questionnaire-progress__section"></div>
+        </div>
+      </div>
+    </div>
+    <div class="questionnaire__header--right">
+      <button class="button--close"><i class="icon-close"></i></button>
+    </div>
+  </div>
+  <div class="questionnaire__content">
+    <div class="questionnaire__title">
+      <img src="../img/icons/emotional.svg" alt="" />
+      <h1>Эмоциональное здоровье</h1>
+    </div>
+    <div class="questionnaire__description-wrapper">
+      <img src="../img/icons/sadness.svg" alt="" />
+      <div class="questionnaire__description">
+        <h3>Печаль</h3>
+        <p>
+          В последнее время вы часто/долго грустите? Или печаль накатывает на
+          Вас волной, и Вы погружаетесь в неё настолько, что испытываете
+          отчаяние?
+        </p>
+      </div>
+    </div>
+    <div class="questionnaire__description-wrapper">
+      <img src="../img/icons/fear.svg" alt="" />
+      <div class="questionnaire__description">
+        <h3>Страх</h3>
+        <p>
+          В последнее время вы часто/долго грустите? Или печаль накатывает на
+          Вас волной, и Вы погружаетесь в неё настолько, что испытываете
+          отчаяние?
+        </p>
+      </div>
+    </div>
+    <div class="questionnaire__description-wrapper">
+      <img src="../img/icons/anger.svg" alt="" />
+      <div class="questionnaire__description">
+        <h3>Злость</h3>
+        <p>
+          В последнее время вы часто/долго грустите? Или печаль накатывает на
+          Вас волной, и Вы погружаетесь в неё настолько, что испытываете
+          отчаяние?
+        </p>
+      </div>
+    </div>
+    <div class="questionnaire__description-wrapper">
+      <img src="../img/icons/joy.svg" alt="" />
+      <div class="questionnaire__description">
+        <h3>Радость</h3>
+        <p>
+          В последнее время вы часто/долго грустите? Или печаль накатывает на
+          Вас волной, и Вы погружаетесь в неё настолько, что испытываете
+          отчаяние?
+        </p>
+      </div>
+    </div>
+
+    <form method="post" action="#" class="form form--sadness">
+      <fieldset class="form__section">
+        <div class="radio__group">
+          <div class="radio">
+            <input id="radio-1" name="radio" type="radio" />
+            <label for="radio-1" class="radio-label"
+              >Нет такого<span>минимальный уровень</span></label
+            >
+          </div>
+          <div class="radio">
+            <input id="radio-2" name="radio" type="radio" />
+            <label for="radio-2" class="radio-label">Грусть</label>
+          </div>
+          <div class="radio">
+            <input id="radio-3" name="radio" type="radio" />
+            <label for="radio-3" class="radio-label">Печаль</label>
+          </div>
+          <div class="radio">
+            <input id="radio-4" name="radio" type="radio" />
+            <label for="radio-4" class="radio-label">Отчаяние</label>
+          </div>
+          <div class="radio">
+            <input id="radio-5" name="radio" type="radio" />
+            <label for="radio-5" class="radio-label">Горе</label>
+          </div>
+          <div class="radio">
+            <input id="radio-6" name="radio" type="radio" />
+            <label for="radio-6" class="radio-label"
+              >Апатия<span>максимальный уровень</span></label
+            >
+          </div>
+        </div>
+        <div class="label-sadness">
+          <span>минимальный уровень</span><span>максимальный уровень</span>
+        </div>
+      </fieldset>
+      <fieldset class="form__section form__section--submit">
+        {{ fieldButton({ tag: 'a', href: '../pages/step06.html', typeClass: '5',
+        disabled: 'disabled', content: 'Продолжить' }) }}
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

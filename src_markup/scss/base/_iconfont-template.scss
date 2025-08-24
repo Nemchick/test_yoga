@@ -1,0 +1,52 @@
+/***
+*
+* iconfont.scss генерируется динамечески со списком классов для иконочного шрифта
+* _iconfont-template.styl - шаблон для генерации файла iconfont.styl
+*
+***/
+
+/* Генерация рандомного числа, для обнуления кеша при деплое на песок и прод */
+
+//$rand: math.random(10000);
+
+//@font-face {
+//	font-family: "<%= fontName %>";
+//	src: url('../fonts/iconfont/<%= fontName %>.eot?v='$rand);
+//	src: url('../fonts/iconfont/<%= fontName %>.eot?v='$rand'#iefix') format('eot'),
+//		url('../fonts/iconfont/<%= fontName %>.woff2?v='$rand) format('woff2'),
+//		url('../fonts/iconfont/<%= fontName %>.woff?v='$rand) format('woff'),
+//		url('../fonts/iconfont/<%= fontName %>.ttf?v='$rand) format('truetype'),
+//		url('../fonts/iconfont/<%= fontName %>.svg?v='$rand'#<%= fontName %>') format('svg');
+//}
+
+@font-face {
+	font-family: "<%= fontName %>";
+	src: url('../fonts/iconfont/<%= fontName %>.eot');
+	src: url('../fonts/iconfont/<%= fontName %>.eot?#iefix') format('eot'),
+		url('../fonts/iconfont/<%= fontName %>.woff2') format('woff2'),
+		url('../fonts/iconfont/<%= fontName %>.woff') format('woff'),
+		url('../fonts/iconfont/<%= fontName %>.ttf') format('truetype');
+}
+
+
+[class^="<%= cssClass %>-"], [class*=" <%= cssClass %>-"] {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&::before {
+		font-family: "<%= fontName %>";
+		speak: none;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: normal;
+		text-decoration: none;
+		text-transform: none;
+	}
+}
+
+<% _.each(glyphs, function(glyph) { %>
+.<%= cssClass %>-<%= glyph.fileName %>::before {
+	content: "\<%= glyph.codePoint %>";
+}<% }); %>

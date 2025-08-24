@@ -1,0 +1,66 @@
+# To contribute improvements to CI/CD templates, please follow the Development guide at:
+# https://docs.gitlab.com/ee/development/cicd/templates.html
+# This specific template is located at:
+# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Docker.gitlab-ci.yml
+
+# Build a Docker image with CI/CD and push to the GitLab registry.
+# Docker-in-Docker documentation: https://docs.gitlab.com/ee/ci/docker/using_docker_build.html
+#
+# This template uses one generic job with conditional builds
+# for the default branch and all other (MR) branches.
+
+stages:
+  - build
+#  - deploy
+
+docker-build-develop:
+  # Use the official docker image.
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  variables:
+    RELEASE_IMAGE: ${CI_REGISTRY_IMAGE}:${CI_COMMIT_REF_NAME}
+  before_script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+  script:
+    - docker build --pull -t $RELEASE_IMAGE -f infra/Dockerfile .
+    - docker push $RELEASE_IMAGE
+    - 'command -v ssh-agent >/dev/null || ( apk add --update openssh )' 
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+    - ssh $SSH_USER@$SSH_HOST sudo sh /root/rebuild.dev.sh frontend
+  only:
+    - develop
+  when: manual
+
+docker-build-release:
+  # Use the official docker image.
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  variables:
+    RELEASE_IMAGE: ${CI_REGISTRY_IMAGE}:latest
+  before_script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+  script:
+    - rm -f .env
+    - mv .env.prod .env
+    - docker build --pull -t $RELEASE_IMAGE -f infra/Dockerfile .
+    - docker push $RELEASE_IMAGE
+    - 'command -v ssh-agent >/dev/null || ( apk add --update openssh )' 
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY_PROD" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan $SSH_HOST_PROD >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+    - ssh $SSH_USER_PROD@$SSH_HOST_PROD sudo sh /root/rebuild.sh frontend
+  only:
+    - master
+  when: manual

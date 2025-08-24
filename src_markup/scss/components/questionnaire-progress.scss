@@ -1,0 +1,120 @@
+.questionnaire-progress {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 12px;
+  width: 100%;
+
+  border-radius: 2px;
+  overflow: hidden;
+  &__section {
+    height: 4px;
+    border-radius: 2px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: 0;
+    width: 100%;
+  }
+  &__wrapper {
+    width: 600px;
+    height: 4px;
+    margin: auto;
+  }
+}
+.questionnaire {
+  &--step01 {
+    & .questionnaire-progress__section {
+      background-image: linear-gradient(90deg, #59ca56, #59ca56);
+    }
+  }
+  &--step02 {
+    & .questionnaire-progress__section {
+      background-image: linear-gradient(90deg, #e6434f, #e6434f);
+    }
+  }
+  &--step03 {
+    & .questionnaire-progress__section {
+      background-image: linear-gradient(90deg, #e6434f, #e6434f);
+    }
+  }
+  &--step04 {
+    & .questionnaire-progress__section {
+      background-image: linear-gradient(90deg, #ff7043, #ff7043);
+    }
+  }
+  &--step05 {
+    & .questionnaire-progress__section {
+      background-image: linear-gradient(90deg, #ff7043, #ff7043);
+    }
+  }
+  &--step06 {
+    & .questionnaire-progress__section {
+      background-image: linear-gradient(90deg, #f2a33c, #f2a33c);
+    }
+  }
+  &--step07 {
+    & .questionnaire-progress__section {
+      background-image: linear-gradient(90deg, #c0ca33, #c0ca33);
+    }
+  }
+  &--step08 {
+    & .questionnaire-progress__section {
+      background-image: linear-gradient(90deg, #59ca56, #59ca56);
+    }
+  }
+  &--step09 {
+    & .questionnaire-progress__section {
+      background-image: linear-gradient(90deg, #59ca56, #59ca56);
+    }
+  }
+  &--step10 {
+    & .questionnaire-progress__section {
+      background-image: linear-gradient(90deg, #009ff5, #009ff5);
+    }
+  }
+  &--step11 {
+    & .questionnaire-progress__section {
+      background-image: linear-gradient(90deg, #009ff5, #009ff5);
+    }
+  }
+  &--step12 {
+    & .questionnaire-progress__section {
+      background-image: linear-gradient(90deg, #b240eb, #b240eb);
+    }
+  }
+  &--step13 {
+    & .questionnaire-progress__section {
+      background-image: linear-gradient(90deg, #59ca56, #59ca56);
+      background-color: #eaeff3;
+    }
+  }
+  &--step14 {
+    & .questionnaire-progress__section {
+      background-image: linear-gradient(90deg, #59ca56, #59ca56);
+      background-color: #eaeff3;
+    }
+  }
+  &--step15 {
+    & .questionnaire-progress__section {
+      background-image: linear-gradient(90deg, #59ca56, #59ca56);
+      background-color: #eaeff3;
+    }
+  }
+  &--step16 {
+    & .questionnaire-progress__section {
+      background-image: linear-gradient(90deg, #59ca56, #59ca56);
+      background-color: #eaeff3;
+    }
+  }
+  &--step17 {
+    & .questionnaire-progress__section {
+      background-image: linear-gradient(90deg, #59ca56, #59ca56);
+      background-color: #eaeff3;
+    }
+  }
+  &--step18 {
+    & .questionnaire-progress__section {
+      background-image: linear-gradient(90deg, #59ca56, #59ca56);
+      background-color: #eaeff3;
+    }
+  }
+}

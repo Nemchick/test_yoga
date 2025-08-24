@@ -1,0 +1,46 @@
+.progress {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  &-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      90deg,
+      #e6434f 0%,
+      #ff9500 16.67%,
+      #ffe61e 33.85%,
+      #59ca56 50%,
+      #009ff5 67.19%,
+      #1570f0 83.85%,
+      #b240eb 100%
+    );
+    border-radius: 4px;
+    &__wrapper {
+      position: relative;
+      width: 100%;
+      height: 12px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    &__mask {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: #eaeff3;
+    }
+  }
+}

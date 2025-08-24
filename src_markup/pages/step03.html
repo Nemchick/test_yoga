@@ -1,0 +1,68 @@
+{% extends "master/questionnaire.html" %} {% block content %}
+
+<div class="questionnaire questionnaire--step03">
+  <div class="questionnaire__header">
+    <div class="questionnaire__header--left">
+      <a href="../pages/step02.html" class="back-link">
+        <i class="icon-back"></i>
+      </a>
+    </div>
+    <div class="questionnaire__header--center">
+      <div class="questionnaire-progress__wrapper">
+        <div class="questionnaire-progress">
+          <div
+            class="questionnaire-progress__section"
+            style="background-size: 63%"
+          ></div>
+          <div class="questionnaire-progress__section"></div>
+          <div class="questionnaire-progress__section"></div>
+        </div>
+      </div>
+    </div>
+    <div class="questionnaire__header--right">
+      <button class="button--close"><i class="icon-close"></i></button>
+    </div>
+  </div>
+  <div class="questionnaire__content">
+    <div class="questionnaire__title">
+      <img src="../img/icons/physical.svg" alt="" />
+      <h1>Физическое здоровье</h1>
+    </div>
+    <div class="questionnaire__description">
+      <p>Выберите все темы физического здоровья, которые вас беспокоят.</p>
+    </div>
+    <form method="post" action="#" class="form form--tags">
+      <fieldset class="form__section">
+        {{ fieldInput({ type: 'checkbox', id: 'tag01', label: 'Позвоночник',
+        customClass: 'checkbox--tag', notification: '' }) }} {{ fieldInput({
+        type: 'checkbox', id: 'tag02', label: 'Поясница', customClass:
+        'checkbox--tag', notification: '' }) }} {{ fieldInput({ type:
+        'checkbox', id: 'tag03', label: 'Органы пищеварения', customClass:
+        'checkbox--tag', notification: '' }) }} {{ fieldInput({ type:
+        'checkbox', id: 'tag04', label: 'Лишний вес', customClass:
+        'checkbox--tag', notification: '' }) }} {{ fieldInput({ type:
+        'checkbox', id: 'tag05', label: 'Обмен веществ', customClass:
+        'checkbox--tag', notification: '' }) }} {{ fieldInput({ type:
+        'checkbox', id: 'tag06', label: 'Эндокринная система', customClass:
+        'checkbox--tag', notification: '' }) }} {{ fieldInput({ type:
+        'checkbox', id: 'tag07', label: 'Лёгкие', customClass: 'checkbox--tag',
+        notification: '' }) }} {{ fieldInput({ type: 'checkbox', id: 'tag08',
+        label: 'Иммунитет', customClass: 'checkbox--tag', notification: '' }) }}
+        {{ fieldInput({ type: 'checkbox', id: 'tag09', label: 'Поясница',
+        customClass: 'checkbox--tag', notification: '' }) }} {{ fieldInput({
+        type: 'checkbox', id: 'tag10', label: 'Мочеполовая система',
+        customClass: 'checkbox--tag', notification: '' }) }} {{ fieldInput({
+        type: 'checkbox', id: 'tag11', label: 'Бессонница', customClass:
+        'checkbox--tag', notification: '' }) }} {{ fieldInput({ type:
+        'checkbox', id: 'tag12', label: 'Нервная система', customClass:
+        'checkbox--tag', notification: '' }) }}
+      </fieldset>
+      <fieldset class="form__section form__section--submit">
+        {{ fieldButton({ tag: 'a', href: '../pages/step04.html', typeClass: '5',
+        content: 'Продолжить' }) }}
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

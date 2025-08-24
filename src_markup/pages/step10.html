@@ -1,0 +1,71 @@
+{% extends "master/questionnaire.html" %} {% block content %}
+
+<div class="questionnaire questionnaire--step10">
+  <div class="questionnaire__header">
+    <div class="questionnaire__header--left">
+      <a href="../pages/step09.html" class="back-link">
+        <i class="icon-back"></i>
+      </a>
+    </div>
+    <div class="questionnaire__header--center">
+      <div class="progress__wrapper">
+        <div class="progress__bar"></div>
+        <div class="progress__bar"></div>
+        <div class="progress__bar"></div>
+        <div class="progress__mask" style="left: 30%"></div>
+      </div>
+    </div>
+    <div class="questionnaire__header--right">
+      <button class="button--close"><i class="icon-close"></i></button>
+    </div>
+  </div>
+  <div class="questionnaire__content">
+    <div class="questionnaire__title">
+      <img src="../img/icons/brightness.svg" alt="" />
+      <h1>Яркость жизни</h1>
+    </div>
+    <div class="questionnaire__description">
+      <p>
+        Можете ли сказать, что полноценно отдыхаете, занимаетесь любимым делом и
+        считаете свою жизнь яркой? Или часто что-то мешает и поэтому этот вопрос
+        актуален для вас? Вы ищете способы разнообразить вашу жизнь? При ответе
+        на эти вопросы будьте честны с самим собой.
+      </p>
+    </div>
+    <form method="post" action="#" class="form form--level">
+      <fieldset class="form__section">
+        <div class="label-range">
+          <span>ужасно</span><span>хорошо</span><span>отлично</span>
+        </div>
+        <div class="range__wrapper">
+          <input
+            type="range"
+            name="level"
+            value="0"
+            min="0"
+            max="9"
+            list="level"
+          />
+          <datalist id="level">
+            <option value="0"></option>
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5"></option>
+            <option value="6"></option>
+            <option value="7"></option>
+            <option value="8"></option>
+            <option value="9"></option>
+          </datalist>
+        </div>
+      </fieldset>
+      <fieldset class="form__section form__section--submit">
+        {{ fieldButton({ tag: 'a', href: '../pages/step11.html', typeClass: '5',
+        content: 'Продолжить' }) }}
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,128 @@
+{% set logged = "yes" %} {% extends "master/master.html" %} {% block content %}
+
+<div class="page page-library">
+  <div class="container">
+    <div class="page__header page__header--link">
+      <a href="pages/library.html" class="back-link"
+        ><i class="icon-back"></i>Библиотека</a
+      >
+      <div class="page__title">
+        <h1>Зарядиться энергией</h1>
+      </div>
+    </div>
+  </div>
+  <section class="section section--library">
+    <div class="container">
+      <div class="library-category__header">
+        <h3>Крийи</h3>
+      </div>
+      <ul class="library-category__list" data-lazy>
+        <li class="library-item">
+          <div class="library-item__img">
+            <div class="library-item__overlay">
+              <a href="pages/library-video.html" class="button-play"
+                ><i class="icon-play"></i
+              ></a>
+            </div>
+            <img data-src="/img/elements/lesson.png" alt="" />
+          </div>
+          <div class="library-item__content">
+            <h3 class="library-item__name">
+              Восстановить силы после долгого дня
+            </h3>
+            <p class="library-item__description">
+              Практика для идеального завершения долгого дня. Снимет усталость,
+              поможет расслабиться и отвлечься от дневных забот. Настроит на
+              крепкий безмятежный сон.
+            </p>
+            <div class="library__info">
+              <span class="library-item__duration">10 мин.</span>
+              <i class="icon-favorite"></i>
+            </div>
+          </div>
+        </li>
+        <li class="library-item">
+          <div class="library-item__img">
+            <div class="program-video__blocked"><i class="icon-lock"></i></div>
+            <img data-src="/img/elements/lesson.png" alt="" />
+          </div>
+          <div class="library-item__content">
+            <h3 class="library-item__name">
+              Восстановить силы после долгого дня
+            </h3>
+            <p class="library-item__description">
+              Практика для идеального завершения долгого дня. Снимет усталость,
+              поможет расслабиться и отвлечься от дневных забот. Настроит на
+              крепкий безмятежный сон.
+            </p>
+            <div class="library__info">
+              <span class="library-item__duration">10 мин.</span>
+              <i class="icon-favorite"></i>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="section section--library">
+    <div class="container">
+      <div class="library-category__header">
+        <h3>Музыка и мантры</h3>
+      </div>
+      <ul class="library-category__list audio" data-lazy>
+        <li class="library-item__audio">
+          <button class="button--play"><i class="icon-play"></i></button>
+          <span class="library-slider__name"
+            >Успокоиться и обрести равновесие</span
+          >
+        </li>
+        <li class="library-item__audio">
+          <button class="button--play"><i class="icon-play"></i></button>
+          <span class="library-slider__name"
+            >Успокоиться и обрести равновесие</span
+          >
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="section section--library">
+    <div class="container">
+      <div class="library-category__header">
+        <h3>Статьи</h3>
+      </div>
+      <ul class="library-category__list" data-lazy>
+        <li class="library-item">
+          <div class="library-item__img">
+            <div class="library-item__overlay">
+              <a href="pages/library-article.html" class="button-play"
+                ><i class="icon-arrow-link"></i
+              ></a>
+            </div>
+            <img data-src="/img/library/04.png" alt="" />
+          </div>
+          <div class="library-item__content">
+            <h3 class="library-item__name">
+              Коврик для йоги: как выбрать и правильно ухаживать
+            </h3>
+            <p class="library-item__description">
+              Практика для идеального завершения долгого дня. Снимет усталость,
+              поможет расслабиться и отвлечься от дневных забот. Настроит на
+              крепкий безмятежный сон. Практика для идеального завершения
+              долгого дня...
+            </p>
+            <div class="library__info">
+              <a
+                href="pages/library-article.html"
+                class="library-item__read-more"
+                >Читать статью</a
+              >
+              <i class="icon-favorite"></i>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+{% endblock %}

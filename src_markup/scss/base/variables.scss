@@ -1,0 +1,90 @@
+// -----------------------------------------------------------------------------
+// Global Variables
+// -----------------------------------------------------------------------------
+$font-primary: 'Inter', sans-serif;
+$font-secondary: 'Sen', sans-serif;
+$font-iconfont: 'iconfont';
+$font-size-default: 16px;
+$font-size-smaller: 14px;
+$font-size-bigger: 20px;
+
+// ----- colors ----------------------------------------------------------------
+$color-body: #ffffff;
+$color-text: #374957;
+$color-text-gold: #bb9166;
+$color-text-orange: #ffa400;
+$color-text-dark: #170022;
+$color-text-custom: #ffdc69;
+
+$color-border: #009ff5;
+
+$color-disabled: #9fa4bc;
+
+// ----- colors of statuses----------------------------------------------------------------
+$color-success: #239024;
+$color-error: #df2d14;
+$color-processing: #39afff;
+$color-finished: #b30000;
+$color-expired: #9fa4bc;
+$color-cancel: #170022;
+
+// ----- inputs colors ---------------------------------------------------------
+$input-background: #ffffff;
+
+// ----- transitions -----------------------------------------------------------
+$t-opacity: opacity 0.2s;
+$t-visibility: visibility 0.2s;
+$t-filter: filter 0.2s ease-out;
+$t-color: color 0.2s ease-out;
+$t-bg-color: background-color 0.2s ease-out;
+$t-box-shadow: box-shadow 0.2s ease-out;
+$t-text-shadow: text-shadow 0.2s ease-out;
+$t-border-color: border-color 0.2s ease-out;
+$t-transform: transform 0.2s ease-out;
+
+// ----- MIXINS -----------------------------------------------------------
+
+/* arrow */
+@mixin dropdownIconMixin {
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    height: 1px;
+    width: 9px;
+    border-radius: 2px;
+    background: #260303;
+    backface-visibility: hidden;
+    transition-property: transform;
+    transition-duration: 0.2s;
+  }
+  &:before {
+    transform: rotate(45deg);
+    right: 28px;
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+@mixin dropdownIconOpenedMixin {
+  &:before {
+    transform: rotate(-45deg);
+  }
+  &:after {
+    transform: rotate(45deg);
+  }
+}
+
+/* text overflow ellipsis */
+@mixin textOverflowMixin {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

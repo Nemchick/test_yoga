@@ -1,0 +1,18 @@
+<!-- Header - Logged -->
+
+<header class="header header--logged">
+  <div class="container">
+    <div class="header-layout">
+      <div class="header-row">
+        {% set clicable = true %} {% include "components/logo.html" %}
+      </div>
+      <div class="header-row">
+        {{ block("components/menu/header-menu-logged") }}
+      </div>
+      <div class="header-row">{{ block("components/user-info") }}</div>
+    </div>
+  </div>
+</header>
+
+{{ block("components/menu/menu-mobile") }} {{
+block("components/user-info-mobile") }}

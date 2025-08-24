@@ -1,0 +1,48 @@
+<div class="subscribes">
+  <div class="subscribes__item current">
+    <div class="subscribes__description">
+      <div class="subscribes__info">
+        <div class="subscribes__term">1 месяц</div>
+        <div class="subscribes__price">400 ₽</div>
+      </div>
+      <div class="subscribes__notice">Следующее списание 20.07.2022</div>
+    </div>
+    <div class="subscribes__status">
+      <i class="icon-check"></i> Активная подписка
+    </div>
+  </div>
+  <span class="subscribes__subtitle">Другие варианты подписки</span>
+  <div class="subscribes__item">
+    <div class="subscribes__description">
+      <div class="subscribes__info">
+        <div class="subscribes__term">6 месяцев</div>
+        <div class="subscribes__discount">20%</div>
+        <div class="subscribes__notice">320 ₽/мес.</div>
+        <div class="subscribes__price">1 920 ₽</div>
+      </div>
+      <a href="#" class="button button--s3 button--t2">Перейти</a>
+    </div>
+  </div>
+  <div class="subscribes__item yearly">
+    <div class="subscribes__description">
+      <div class="subscribes__info">
+        <div class="subscribes__term">12 месяцев</div>
+        <div class="subscribes__discount">40%</div>
+        <div class="subscribes__notice">280 ₽/мес.</div>
+        <div class="subscribes__price">3 360 ₽</div>
+      </div>
+      <a href="#" class="button button--s3 button--t2">Перейти</a>
+    </div>
+  </div>
+  <form method="post" action="#" class="form form--promocode">
+    <fieldset class="form__section form__section--promocode">
+      {{ fieldInput({ type: 'text', id: 'promo-code', label: '', placeholder:
+      'Введите промокод', status: 'error', notification: 'Неверный промокод' })
+      }} {{ fieldButton({ tag: 'button', type: 'submit', typeClass: '3',
+      sizeClass: '4', disabled: '', content: 'Применить' }) }}
+    </fieldset>
+  </form>
+  <a href="pages/unsubscribe.html" class="button button--s1 button--t3"
+    >Отменить подписку</a
+  >
+</div>

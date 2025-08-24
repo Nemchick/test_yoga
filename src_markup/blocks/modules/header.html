@@ -1,0 +1,19 @@
+<!-- Header - Default -->
+
+<header class="header">
+  <div class="container">
+    <div class="header-layout">
+      <div class="header-row">
+        {% set clicable = true %} {% include "components/logo.html" %}
+      </div>
+      <div class="header-row">
+        {{ block("components/menu/header-menu") }}
+        <div class="burger-menu__opener" data-burger-menu-opener>
+          <i class="icon-menu"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+{{ block("components/menu/burger-menu-mobile") }}

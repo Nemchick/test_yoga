@@ -1,0 +1,160 @@
+{% set logged = "yes" %} {% extends "master/master.html" %} {% block content %}
+
+<div class="page page-program">
+  <section class="section section--program-final">
+    <div class="container">
+      <div class="program-final__wrapper">
+        <div class="program-final__img">
+          <img src="../img/elements/final.jpg" alt="" />
+        </div>
+        <div class="program-final__content">
+          <div class="progress-bar__wrapper">
+            <div class="progress-bar"></div>
+            <div class="progress-bar__mask" style="left: 100%"></div>
+          </div>
+          <h2 class="program-final__title">
+            Поздравляем! Вы успешно прошли программу «Глубокая релаксация»
+          </h2>
+          <div class="program-final__description">
+            Поделитесь с нами впечатлениями.
+          </div>
+          <form method="post" action="#" class="form form--feedback">
+            <div class="feedback__rating rating-group">
+              <input
+                disabled
+                checked
+                class="rating__input rating__input--none"
+                name="rating1"
+                id="rating1-none"
+                value="0"
+                type="radio"
+              />
+              <label aria-label="1 star" class="rating__label" for="rating1-1"
+                ><i class="rating__icon icon-star"></i
+              ></label>
+              <input
+                class="rating__input"
+                name="rating1"
+                id="rating1-1"
+                value="1"
+                type="radio"
+              />
+              <label aria-label="2 stars" class="rating__label" for="rating1-2"
+                ><i class="rating__icon icon-star"></i
+              ></label>
+              <input
+                class="rating__input"
+                name="rating1"
+                id="rating1-2"
+                value="2"
+                type="radio"
+              />
+              <label aria-label="3 stars" class="rating__label" for="rating1-3"
+                ><i class="rating__icon icon-star"></i
+              ></label>
+              <input
+                class="rating__input"
+                name="rating1"
+                id="rating1-3"
+                value="3"
+                type="radio"
+              />
+              <label aria-label="4 stars" class="rating__label" for="rating1-4"
+                ><i class="rating__icon icon-star"></i
+              ></label>
+              <input
+                class="rating__input"
+                name="rating1"
+                id="rating1-4"
+                value="4"
+                type="radio"
+              />
+              <label aria-label="5 stars" class="rating__label" for="rating1-5"
+                ><i class="rating__icon icon-star"></i
+              ></label>
+              <input
+                class="rating__input"
+                name="rating1"
+                id="rating1-5"
+                value="5"
+                type="radio"
+              />
+            </div>
+            {{ fieldInput({ type: 'textarea', id: 'feedback', label: '',
+            placeholder: 'Что вам понравилось?' }) }}
+            <div class="form__section--submit">
+              {{ fieldButton({ tag: 'button', type: 'submit', typeClass: '3',
+              sizeClass: '1', content: 'Отправить отзыв' }) }}
+            </div>
+          </form>
+          <div class="program-final__buttons">
+            <a class="button button--s2 button--t1"
+              >Подобрать новую программу</a
+            >
+            <a class="button button--s2 button--t3"
+              >Пройти программу повторно</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--program-final">
+    <div class="container">
+      <div class="program-final__wrapper">
+        <div class="program-final__img">
+          <img src="../img/elements/final.jpg" alt="" />
+        </div>
+        <div class="program-final__content">
+          <div class="progress-bar__wrapper">
+            <div class="progress-bar"></div>
+            <div class="progress-bar__mask" style="left: 100%"></div>
+          </div>
+          <h2 class="program-final__title">
+            Поздравляем! Вы успешно прошли программу «Глубокая релаксация»
+          </h2>
+          <div class="program-final__description">
+            Поделитесь с нами впечатлениями.
+          </div>
+          <div class="feedback__submitted">
+            <p>Благодарим за отзыв!</p>
+          </div>
+          <div class="program-final__buttons">
+            <a class="button button--s2 button--t1"
+              >Подобрать новую программу</a
+            >
+            <a class="button button--s2 button--t3"
+              >Пройти программу повторно</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--sharing">
+    <div class="container">
+      <div class="sharing__wrapper">
+        <h3 class="sharing__title">Мои шеринги</h3>
+        <div class="sharing__graph">
+          <img src="../img/elements/graph.svg" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="recommendation">
+    <div class="recommendation__wrapper">
+      <div class="recommendation__img">
+        <img src="../img/elements/article.jpg" alt="" />
+      </div>
+      <div class="recommendation__content">
+        <p>Основы йоги</p>
+        <h3>Необходимые знания о Кундалини йоге</h3>
+        <a href="" class="read-more">Читать статью</a>
+      </div>
+    </div>
+    <button class="button-close"><i class="icon-close"></i></button>
+  </div>
+</div>
+
+{% endblock %}

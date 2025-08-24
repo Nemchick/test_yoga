@@ -1,0 +1,34 @@
+<div class="form-wrapper">
+  <form class="form form--registration" method="post" action="#">
+    <div class="form__heading">
+      <h2 class="form__title">Регистрация</h2>
+      <div class="form__subtitle">
+        Мы подобрали для вас вас практику, которая поможет в достижении ваших
+        целей. Чтобы начать заниматься зарегистрируйтесь.
+      </div>
+    </div>
+    <fieldset class="form__section">
+      {{ fieldInput({ type: 'email', id: 'email', label: 'E-mail', placeholder:
+      'Введите e-mail', status: '', notification: '' }) }} {{ fieldInput({ type:
+      'password', label: 'Пароль', id: 'pass', placeholder: 'Введите пароль',
+      notification: '' }) }} {{ fieldInput({ type: 'password', label: 'Повторить
+      пароль', id: 'pass1', placeholder: 'Повторите пароль', notification: '' })
+      }}
+    </fieldset>
+    <fieldset
+      class="form__section form__section--submit form__section--underline"
+    >
+      {{ fieldInput({ type: 'checkbox', id: 'agree2', label: 'Оставаться в
+      системе', status: '', notification: '' }) }} {{ fieldButton({ tag:
+      'button', type: 'submit', typeClass: '1', sizeClass: '1', content:
+      'Зарегистрироваться' }) }}
+    </fieldset>
+  </form>
+  <div class="socials__description">
+    <p>или авторизуйтесь через соцсеть</p>
+  </div>
+  {{ block("components/socials") }}
+  <div class="form__addition">
+    Уже есть аккаунт? <a href="pages/login.html">Авторизуйтесь</a>
+  </div>
+</div>
